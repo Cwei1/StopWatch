@@ -1,0 +1,125 @@
+C51 COMPILER V9.53.0.0   DRAW                                                              04/10/2017 19:12:34 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE DRAW
+OBJECT MODULE PLACED IN .\src\draw.OBJ
+COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\Users\cardy\S
+                    -implicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\src\draw.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2
+                    -) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\Users\cardy\SimplicityStudio\v4
+                    -_workspace\EFM8BB3_PowerModes_2_2_2\inc;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\config
+                    -;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\graphics;C:/SiliconLabs/SimplicityStudio/v4/d
+                    -eveloper/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8BB3_S
+                    -LSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;
+                    -C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;C:/Silic
+                    -onLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;C:/SiliconLabs/Sim
+                    -plicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;C:/SiliconLabs/SimplicityStudio/v4/dev
+                    -eloper/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/
+                    -EFM8BB3/inc) PRINT(.\src\draw.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\draw.OBJ)
+
+line level    source
+
+   1          /**************************************************************************//**
+   2           * Copyright (c) 2015 by Silicon Laboratories Inc. All rights reserved.
+   3           *
+   4           * http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreement.txt
+   5           *****************************************************************************/
+   6          /////////////////////////////////////////////////////////////////////////////
+   7          // draw.c
+   8          /////////////////////////////////////////////////////////////////////////////
+   9          
+  10          #include <string.h>
+  11          #include "bsp.h"
+  12          #include "draw.h"
+  13          #include "splash.h"
+  14          
+  15          //-----------------------------------------------------------------------------
+  16          // Variables
+  17          //-----------------------------------------------------------------------------
+  18          // Generic line buffer
+  19          SI_SEGMENT_VARIABLE(Line[DISP_BUF_SIZE], uint8_t, RENDER_LINE_SEG);
+  20          
+  21          
+  22          //-----------------------------------------------------------------------------
+  23          // RENDER_ClrLineSegment
+  24          //-----------------------------------------------------------------------------
+  25          //
+  26          // Clear the contents of a line segment buffer, setting its contents
+  27          // to the background color.
+  28          //
+  29          // line - a line buffer to clear (length: DISP_BUF_SIZE)
+  30          // x1 - the pixel x position to start writing, must be 8 bit alignment
+  31          // x2 - the pixel x position to end writing, must be divisible by 8
+  32          //-----------------------------------------------------------------------------
+  33          static void RENDER_ClrLineSegment(
+  34                          SI_VARIABLE_SEGMENT_POINTER(line, uint8_t, RENDER_LINE_SEG), uint8_t x1, uint8_t x2)
+  35          {
+  36   1              uint8_t i;
+  37   1          for (i = (x1 / 8); i < (x2 / 8); i++) {
+  38   2              line[i] = 0;
+  39   2          }
+  40   1      }
+  41          
+  42          
+  43          //-----------------------------------------------------------------------------
+  44          // DrawSplashScreen() Routine
+  45          //-----------------------------------------------------------------------------
+C51 COMPILER V9.53.0.0   DRAW                                                              04/10/2017 19:12:34 PAGE 2   
+
+  46          //
+  47          // Draw SiLabs splash screen.
+  48          //
+  49          //-----------------------------------------------------------------------------
+  50          void DrawSplashScreen(void)
+  51          {
+  52   1          uint8_t i;
+  53   1          for (i = 0; i < DISP_HEIGHT; i++) {
+  54   2              RENDER_ClrLine(Line);
+  55   2              RENDER_SpriteLine(Line, 0,  i, splash_bits, DISP_WIDTH);
+  56   2              DISP_WriteLine(i, Line);
+  57   2          }
+  58   1      }
+  59          
+  60          
+  61          //-----------------------------------------------------------------------------
+  62          // RenderText
+  63          //-----------------------------------------------------------------------------
+  64          //
+  65          // Draw a string on screen centralist.
+  66          //
+  67          //-----------------------------------------------------------------------------
+  68          void DrawScreenText(SI_VARIABLE_SEGMENT_POINTER(str, char, RENDER_STR_SEG), uint8_t y)
+  69          {
+  70   1          uint8_t i;
+  71   1          uint8_t len = RENDER_GetStrSize(str);
+  72   1      
+  73   1          /* Copy a line from text area into line buffer. */
+  74   1          for (i = 0; i < DISP_WIDTH / 8; i++)
+  75   1          {
+  76   2            Line[i] = splash_bits[16 * 100 + i];
+  77   2          }
+  78   1      
+  79   1          for (i = 0; i < FONT_HEIGHT; i++) {
+  80   2              RENDER_ClrLineSegment(Line, TEXT_AREA_X1, TEXT_AREA_X2);
+  81   2              RENDER_StrLine(Line, (DISP_WIDTH - len) / 2, i, str);
+  82   2              DISP_WriteLine(i + y, Line);
+  83   2          }
+  84   1      }
+  85          
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    180    ----
+   CONSTANT SIZE    =   2048    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----       7
+   IDATA SIZE       =     16    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

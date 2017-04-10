@@ -1,0 +1,343 @@
+C51 COMPILER V9.53.0.0   MAIN                                                              04/10/2017 19:25:04 PAGE 1   
+
+
+C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\src\main.OBJ
+COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\Users\cardy\S
+                    -implicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\src\main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2
+                    -) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\Users\cardy\SimplicityStudio\v4
+                    -_workspace\EFM8BB3_PowerModes_2_2_2\inc;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\config
+                    -;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\graphics;C:/SiliconLabs/SimplicityStudio/v4/d
+                    -eveloper/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8BB3_S
+                    -LSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;
+                    -C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;C:/Silic
+                    -onLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;C:/SiliconLabs/Sim
+                    -plicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;C:/SiliconLabs/SimplicityStudio/v4/dev
+                    -eloper/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/
+                    -EFM8BB3/inc) PRINT(.\src\main.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\main.OBJ)
+
+line level    source
+
+   1          //-----------------------------------------------------------------------------
+   2          // main.c
+   3          //-----------------------------------------------------------------------------
+   4          // Copyright 2015 Silicon Laboratories, Inc.
+   5          // http://developer.silabs.com/legal/version/v11/Silicon_Labs_Software_License_Agreement.txt
+   6          //
+   7          // Program Description:
+   8          //
+   9          // This example demonstrates the available power modes on the EFM8BB3 STK using
+  10          // the LCD and push buttons.
+  11          //
+  12          //-----------------------------------------------------------------------------
+  13          // How To Test: EFM8BB3 STK
+  14          //-----------------------------------------------------------------------------
+  15          // 1) Place the SW104 switch in "AEM" mode.
+  16          // 2) Connect the EFM8BB3 STK board to a PC using a mini USB cable.
+  17          // 3) Compile and download code to the EFM8BB3 STK board.
+  18          //    In Simplicity Studio IDE, select Run -> Debug from the menu bar,
+  19          //    click the Debug button in the quick menu, or press F11.
+  20          // 4) Run the code.
+  21          //    In Simplicity Studio IDE, select Run -> Resume from the menu bar,
+  22          //    click the Resume button in the quick menu, or press F8.
+  23          // 5) The power modes example should start.
+  24          // 6) Press PB1 to cycle through the 6 different power modes shown on
+  25          //    the LCD.
+  26          // 7) Press PB0 to enter the selected power mode. The LED turns off.
+  27          //    For all modes except Shutdown, the display will show "*Active*" while
+  28          //    in the mode. For Shutdown mode the display is turned off.
+  29          // 8) Press PB0 (all modes except Stop and Shutdown) to return to the menu,
+  30          //    or press Reset (all modes) to restart the example. The LED turns on.
+  31          //
+  32          // Target:         EFM8BB3
+  33          // Tool chain:     Generic
+  34          //
+  35          // Release 0.1 (MD;AT)
+  36          //    - Initial Revision
+  37          //    - 1 APR 2016
+  38          //
+  39          //-----------------------------------------------------------------------------
+  40          // Resources:
+  41          //-----------------------------------------------------------------------------
+  42          // SYSCLK - 24.5 MHz HFOSC0 / 1
+  43          // SPI0   - 1 MHz
+  44          // Timer2 - 2 MHz (SPI CS delay)
+  45          // Timer3 - 1 kHz (1 ms tick)
+C51 COMPILER V9.53.0.0   MAIN                                                              04/10/2017 19:25:04 PAGE 2   
+
+  46          // P2.6 - Display CS (Active High)
+  47          // P0.6 - SCK
+  48          // P1.0 - MOSI
+  49          // P1.4 - LED G
+  50          // P0.2 - Push Button 0
+  51          // P0.3 - Push Button 1
+  52          // P1.7 - Joystick (not used)
+  53          // P3.4 - Display enable
+  54          //
+  55          //-----------------------------------------------------------------------------
+  56          
+  57          #include "bsp.h"
+  58          #include "pwr.h"
+  59          
+  60          #include "draw.h"
+  61          #include "tick.h"
+  62          #include "InitDevice.h"
+  63          #include <stdio.h>
+  64          #include <string.h>
+  65          #include<stdlib.h>
+  66          
+  67          
+  68          //-----------------------------------------------------------------------------
+  69          // Local Definitions
+  70          //-----------------------------------------------------------------------------
+  71          
+  72          // Power mode enumeration
+  73          #define NORMAL_MODE 0
+  74          #define IDLE_MODE 1
+  75          #define STOP_MODE 2
+  76          #define SUSPEND_MODE 3
+  77          #define SNOOZE_MODE 4
+  78          #define SHUTDOWN_MODE 5
+  79          #define LAST_POWER_MODE SHUTDOWN_MODE
+  80          
+  81          SI_VARIABLE_SEGMENT_POINTER(powerModeText[], char, SI_SEG_CODE) =
+  82          {
+  83            "0. Normal Mode",
+  84            "1. Idle Mode",
+  85            "2. Stop Mode",
+  86            "3. Suspend Mode",
+  87            "4. Snooze Mode",
+  88            "5. Shutdown Mode",
+  89          };
+  90          
+  91          // Power mode status
+  92          #define STATUS_MODE_ACTIVE 0
+  93          #define STATUS_MODE_WAKEUP 1
+  94          
+  95          SI_VARIABLE_SEGMENT_POINTER(powerStatusText[], char, SI_SEG_CODE) =
+  96          {
+  97            "*Active*",
+  98            "*Wakeup*",
+  99          };
+ 100          
+ 101          // Function that demonstrates the available power modes
+ 102          void APP_enterPowerMode(uint8_t mode);
+ 103          
+ 104          
+ 105          //-----------------------------------------------------------------------------
+ 106          // User Interface Functions
+ 107          //-----------------------------------------------------------------------------
+ 108          
+C51 COMPILER V9.53.0.0   MAIN                                                              04/10/2017 19:25:04 PAGE 3   
+
+ 109          // Push button assignments
+ 110          #define UI_BTN_MENU   (1 << 0)
+ 111          #define UI_BTN_SELECT (1 << 1)
+ 112          
+ 113          // Read and return push button status
+ 114          uint8_t UI_getButtons(void)
+ 115          {
+ 116   1        uint8_t status = 0;
+ 117   1        if (BSP_PB1 == BSP_PB_PRESSED) {
+ 118   2          status = UI_BTN_MENU;
+ 119   2        } else if (BSP_PB0 == BSP_PB_PRESSED) {
+ 120   2          status = UI_BTN_SELECT;
+ 121   2        }
+ 122   1        return status;
+ 123   1      }
+ 124          
+ 125          // Manage the UI menu and return the user selection
+ 126          uint8_t UI_getPowerMode(uint8_t mode)
+ 127          {
+ 128   1        // Initialize the display and draw the UI
+ 129   1        DISP_Init();
+ 130   1        DrawSplashScreen();
+ 131   1        DrawScreenText(powerModeText[mode], TEXT_ROW0_Y);
+ 132   1      
+ 133   1        // Menu selection loop
+ 134   1        while (true)
+ 135   1        {
+ 136   2          // Wait for button press leading edge
+ 137   2          while (UI_getButtons() != 0);
+ 138   2          while (UI_getButtons() == 0);
+ 139   2      
+ 140   2          // Cycle menu through available modes
+ 141   2          if (UI_getButtons() & UI_BTN_MENU)
+ 142   2          {
+ 143   3            mode++;
+ 144   3            if (mode > LAST_POWER_MODE)
+ 145   3            {
+ 146   4              mode = NORMAL_MODE;
+ 147   4            }
+ 148   3            DrawScreenText(powerModeText[mode], TEXT_ROW0_Y);
+ 149   3          }
+ 150   2          // Selection made, break out of menu loop
+ 151   2          else if (UI_getButtons() & UI_BTN_SELECT)
+ 152   2          {
+ 153   3            break;
+ 154   3          }
+ 155   2        }
+ 156   1      
+ 157   1        // Wait for all buttons to be released
+ 158   1        while (UI_getButtons() != 0);
+ 159   1      
+ 160   1        // Display mode status, turn off the LED and return the selection
+ 161   1        DrawScreenText(powerStatusText[STATUS_MODE_ACTIVE], TEXT_ROW1_Y);
+ 162   1        BSP_LED_G = BSP_LED_OFF;
+ 163   1        return mode;
+ 164   1      }
+ 165          
+ 166          // Disables the LCD display
+ 167          void UI_disableDisplay(void)
+ 168          {
+ 169   1        // Clear the display screen
+ 170   1        DISP_ClearAll();
+ 171   1        // Wait for BSP to complete all display updates
+C51 COMPILER V9.53.0.0   MAIN                                                              04/10/2017 19:25:04 PAGE 4   
+
+ 172   1        while (BSP_DISP_CS == SPI_CS_ASSERT_LVL);
+ 173   1        // Disable the display
+ 174   1        BSP_DISP_EN = DISP_EN_BC;
+ 175   1      }
+ 176          
+ 177          // Port Match ISR - Triggered on leading edge of UI_BTN_SELECT.
+ 178          SI_INTERRUPT (PMATCH_ISR, PMATCH_IRQn)
+ 179          {
+ 180   1        // Turn on LED whenever UI_BTN_SELECT is pressed
+ 181   1        BSP_LED_G = BSP_LED_ON;
+ 182   1      }
+ 183          
+ 184          
+ 185          //-----------------------------------------------------------------------------
+ 186          // Example main()
+ 187          //-----------------------------------------------------------------------------
+ 188          int ms=0;
+ 189          int sec=0;
+ 190          int minute=0;
+ 191          int hour=0;
+ 192          int i;
+ 193          void main(void)
+ 194          {
+ 195   1        uint8_t modeSelected = NORMAL_MODE;
+ 196   1      
+ 197   1        // Initialize the device
+ 198   1        enter_DefaultMode_from_RESET();
+ 199   1      
+ 200   1        // Safety trap. Press either push button while resetting the device to
+ 201   1        // stall the application here.
+ 202   1        while (UI_getButtons());
+ 203   1      
+ 204   1        // Start with the LED on
+ 205   1        BSP_LED_G = BSP_LED_ON;
+ 206   1      
+ 207   1        // Enable all interrupts
+ 208   1        IE_EA = 1;
+ 209   1      
+ 210   1        // Mainloop
+ 211   1        while (true)
+ 212   1        {
+ 213   2                char strms[3];
+ 214   2                char strsec[3];
+ 215   2                char strmin[3];
+ 216   2                char strhour[3];
+ 217   2                sprintf(strhour, "%i", hour);
+ 218   2                sprintf(strmin,"%i",minute);
+ 219   2                sprintf(strsec, "%i", sec);
+ 220   2                sprintf(strms,"%i",ms);
+ 221   2                DrawScreenText(strhour, 96);
+ 222   2                DrawScreenText("Hours:", 88);
+ 223   2                DrawScreenText(strmin, 80);
+ 224   2                DrawScreenText("Minutes:", 72);
+ 225   2                DrawScreenText(strsec, 64);
+ 226   2                DrawScreenText("Seconds:", 56);
+ 227   2                DrawScreenText(strms, 48);
+ 228   2                DrawScreenText("Milliseconds:",40);
+ 229   2                for (i=0;i<32;i++){
+ 230   3      
+ 231   3                }
+ 232   2                if (ms<99){
+ 233   3                        ms++;
+ 234   3                }
+C51 COMPILER V9.53.0.0   MAIN                                                              04/10/2017 19:25:04 PAGE 5   
+
+ 235   2                else if(sec<59){
+ 236   3                        ms=0;
+ 237   3                        sec++;
+ 238   3                }
+ 239   2                else if(minute<59){
+ 240   3                        sec=0;
+ 241   3                        minute++;
+ 242   3                }
+ 243   2                else{
+ 244   3                        minute=0;
+ 245   3                        hour++;
+ 246   3                }
+ 247   2        }
+ 248   1      }
+ 249          
+ 250          //-----------------------------------------------------------------------------
+ 251          // Demonstrate the available power modes
+ 252          //-----------------------------------------------------------------------------
+ 253          void APP_enterPowerMode(uint8_t mode)
+ 254          {
+ 255   1        // Clear the PMU wake flags
+ 256   1        uint8_t wake_flags = PWR_readAndClearWakeFlags();
+ 257   1      
+ 258   1        // Start the selected power mode
+ 259   1        switch (mode)
+ 260   1        {
+ 261   2          case NORMAL_MODE:
+ 262   2            // Wait for button press on PB0
+ 263   2            while (BSP_PB0 != BSP_PB_PRESSED);
+ 264   2            break;
+ 265   2      
+ 266   2          case IDLE_MODE:
+ 267   2            // Interrupts must be enabled to return from Idle mode
+ 268   2            PWR_enterIdle();
+ 269   2            break;
+ 270   2      
+ 271   2          case STOP_MODE:
+ 272   2            // Disable VMON0 to see datasheet current (VMON0 adds ~15 uA)
+ 273   2            PWR_enterStop();
+ 274   2            break;
+ 275   2      
+ 276   2          case SUSPEND_MODE:
+ 277   2            // Disable VMON0 to see datasheet current (VMON0 adds ~15 uA)
+ 278   2            // Enter Suspend mode with port match previously enabled as the wake source
+ 279   2            PWR_enterSuspend();
+ 280   2            wake_flags = PWR_readAndClearWakeFlags();
+ 281   2            break;
+ 282   2      
+ 283   2          case SNOOZE_MODE:
+ 284   2            // Disable VMON0 to see datasheet current (VMON0 adds ~15 uA)
+ 285   2            // Enter Snooze mode with port match previously enabled as the wake source
+ 286   2            PWR_enterSnooze();
+ 287   2            wake_flags = PWR_readAndClearWakeFlags();
+ 288   2            break;
+ 289   2      
+ 290   2          case SHUTDOWN_MODE:
+ 291   2            // Disable VMON0 to see datasheet current (VMON0 adds ~15 uA)
+ 292   2            PWR_enterShutdown();
+ 293   2            break;
+ 294   2        }
+ 295   1      }
+
+
+C51 COMPILER V9.53.0.0   MAIN                                                              04/10/2017 19:25:04 PAGE 6   
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    496    ----
+   CONSTANT SIZE    =    149    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     26      16
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+   EDATA SIZE       =   ----    ----
+   HDATA SIZE       =   ----    ----
+   XDATA CONST SIZE =   ----    ----
+   FAR CONST SIZE   =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
