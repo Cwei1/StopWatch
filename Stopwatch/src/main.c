@@ -65,113 +65,18 @@
 #include<stdlib.h>
 
 
-//-----------------------------------------------------------------------------
-// Local Definitions
-//-----------------------------------------------------------------------------
-
-// Power mode enumeration
-#define NORMAL_MODE 0
-#define IDLE_MODE 1
-#define STOP_MODE 2
-#define SUSPEND_MODE 3
-#define SNOOZE_MODE 4
-#define SHUTDOWN_MODE 5
-#define LAST_POWER_MODE SHUTDOWN_MODE
-
-SI_VARIABLE_SEGMENT_POINTER(powerModeText[], char, SI_SEG_CODE) =
-{
-  "0. Normal Mode",
-  "1. Idle Mode",
-  "2. Stop Mode",
-  "3. Suspend Mode",
-  "4. Snooze Mode",
-  "5. Shutdown Mode",
-};
-
-// Power mode status
-#define STATUS_MODE_ACTIVE 0
-#define STATUS_MODE_WAKEUP 1
-
-SI_VARIABLE_SEGMENT_POINTER(powerStatusText[], char, SI_SEG_CODE) =
-{
-  "*Active*",
-  "*Wakeup*",
-};
-
-// Function that demonstrates the available power modes
-void APP_enterPowerMode(uint8_t mode);
-
-
-//-----------------------------------------------------------------------------
-// User Interface Functions
-//-----------------------------------------------------------------------------
-
-// Push button assignments
-#define UI_BTN_MENU   (1 << 0)
-#define UI_BTN_SELECT (1 << 1)
+int toggle =0;
+int toggle2=0;
 
 // Read and return push button status
 uint8_t UI_getButtons(void)
 {
   uint8_t status = 0;
-  if (BSP_PB1 == BSP_PB_PRESSED) {
-    status = UI_BTN_MENU;
-  } else if (BSP_PB0 == BSP_PB_PRESSED) {
-    status = UI_BTN_SELECT;
+  if (BSP_PB0 == BSP_PB_PRESSED && toggle == 0) {
+    status = 1;
+    toggle=1;
   }
   return status;
-}
-
-// Manage the UI menu and return the user selection
-uint8_t UI_getPowerMode(uint8_t mode)
-{
-  // Initialize the display and draw the UI
-  DISP_Init();
-  DrawSplashScreen();
-  DrawScreenText(powerModeText[mode], TEXT_ROW0_Y);
-
-  // Menu selection loop
-  while (true)
-  {
-    // Wait for button press leading edge
-    while (UI_getButtons() != 0);
-    while (UI_getButtons() == 0);
-
-    // Cycle menu through available modes
-    if (UI_getButtons() & UI_BTN_MENU)
-    {
-      mode++;
-      if (mode > LAST_POWER_MODE)
-      {
-        mode = NORMAL_MODE;
-      }
-      DrawScreenText(powerModeText[mode], TEXT_ROW0_Y);
-    }
-    // Selection made, break out of menu loop
-    else if (UI_getButtons() & UI_BTN_SELECT)
-    {
-      break;
-    }
-  }
-
-  // Wait for all buttons to be released
-  while (UI_getButtons() != 0);
-
-  // Display mode status, turn off the LED and return the selection
-  DrawScreenText(powerStatusText[STATUS_MODE_ACTIVE], TEXT_ROW1_Y);
-  BSP_LED_G = BSP_LED_OFF;
-  return mode;
-}
-
-// Disables the LCD display
-void UI_disableDisplay(void)
-{
-  // Clear the display screen
-  DISP_ClearAll();
-  // Wait for BSP to complete all display updates
-  while (BSP_DISP_CS == SPI_CS_ASSERT_LVL);
-  // Disable the display
-  BSP_DISP_EN = DISP_EN_BC;
 }
 
 // Port Match ISR - Triggered on leading edge of UI_BTN_SELECT.
@@ -181,25 +86,18 @@ SI_INTERRUPT (PMATCH_ISR, PMATCH_IRQn)
   BSP_LED_G = BSP_LED_ON;
 }
 
-
-//-----------------------------------------------------------------------------
-// Example main()
-//-----------------------------------------------------------------------------
 int ms=0;
 int sec=0;
 int minute=0;
 int hour=0;
-int i;
+
 void main(void)
 {
-  uint8_t modeSelected = NORMAL_MODE;
+	int nxtline=0;
+	int lap=0;
 
   // Initialize the device
   enter_DefaultMode_from_RESET();
-
-  // Safety trap. Press either push button while resetting the device to
-  // stall the application here.
-  while (UI_getButtons());
 
   // Start with the LED on
   BSP_LED_G = BSP_LED_ON;
@@ -207,29 +105,33 @@ void main(void)
   // Enable all interrupts
   IE_EA = 1;
 
+  if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 0) {
+        toggle2=1;
+  }
+
   // Mainloop
-  while (true)
+  while (toggle2)
   {
-	  char strms[3];
+	  char strms[4];
 	  char strsec[3];
 	  char strmin[3];
 	  char strhour[3];
+	  char strtime[16];
 	  sprintf(strhour, "%i", hour);
 	  sprintf(strmin,"%i",minute);
 	  sprintf(strsec, "%i", sec);
 	  sprintf(strms,"%i",ms);
-	  DrawScreenText(strhour, 96);
-	  DrawScreenText("Hours:", 88);
-	  DrawScreenText(strmin, 80);
-	  DrawScreenText("Minutes:", 72);
-	  DrawScreenText(strsec, 64);
-	  DrawScreenText("Seconds:", 56);
-	  DrawScreenText(strms, 48);
-	  DrawScreenText("Milliseconds:",40);
-	  for (i=0;i<32;i++){
+	  strcpy(strtime, "Time:");
+	  strcat(strtime, strhour);
+	  strcat(strtime,":");
+	  strcat(strtime,strmin);
+	  strcat(strtime,":");
+	  strcat(strtime,strsec);
+	  strcat(strtime,":");
+	  strcat(strtime,strms);
 
-	  }
-	  if (ms<99){
+	  DrawScreenText(strtime,0);
+	  if (ms<999){
 		  ms++;
 	  }
 	  else if(sec<59){
@@ -244,52 +146,27 @@ void main(void)
 		  minute=0;
 		  hour++;
 	  }
-  }
-}
+	  if (UI_getButtons() == 1) {
+		  char strlap[3]="";
+		  char lapname[19]="";
+		  nxtline=nxtline+8;
+		  lap++;
+		  sprintf(strlap,"%i",lap);
+		  strcat(lapname, "Lap ");
+		  strcat(lapname, strlap);
+		  strcat(lapname,":");
+		  strcat(lapname,strtime);
+		  DrawScreenText(lapname,nxtline);
+		  if (nxtline==120){
+			  nxtline=0;
+		  }
 
-//-----------------------------------------------------------------------------
-// Demonstrate the available power modes
-//-----------------------------------------------------------------------------
-void APP_enterPowerMode(uint8_t mode)
-{
-  // Clear the PMU wake flags
-  uint8_t wake_flags = PWR_readAndClearWakeFlags();
-
-  // Start the selected power mode
-  switch (mode)
-  {
-    case NORMAL_MODE:
-      // Wait for button press on PB0
-      while (BSP_PB0 != BSP_PB_PRESSED);
-      break;
-
-    case IDLE_MODE:
-      // Interrupts must be enabled to return from Idle mode
-      PWR_enterIdle();
-      break;
-
-    case STOP_MODE:
-      // Disable VMON0 to see datasheet current (VMON0 adds ~15 uA)
-      PWR_enterStop();
-      break;
-
-    case SUSPEND_MODE:
-      // Disable VMON0 to see datasheet current (VMON0 adds ~15 uA)
-      // Enter Suspend mode with port match previously enabled as the wake source
-      PWR_enterSuspend();
-      wake_flags = PWR_readAndClearWakeFlags();
-      break;
-
-    case SNOOZE_MODE:
-      // Disable VMON0 to see datasheet current (VMON0 adds ~15 uA)
-      // Enter Snooze mode with port match previously enabled as the wake source
-      PWR_enterSnooze();
-      wake_flags = PWR_readAndClearWakeFlags();
-      break;
-
-    case SHUTDOWN_MODE:
-      // Disable VMON0 to see datasheet current (VMON0 adds ~15 uA)
-      PWR_enterShutdown();
-      break;
+	  }
+	  if (BSP_PB0 == !BSP_PB_PRESSED && toggle == 1) {
+	  			  toggle=0;
+	  }
+	  if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 1) {
+	  	  		  toggle2=0;
+	  }
   }
 }
