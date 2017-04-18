@@ -1,18 +1,18 @@
-C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 16:30:59 PAGE 1   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:22:53 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
 OBJECT MODULE PLACED IN .\src\main.OBJ
 COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\Users\cardy\D
                     -esktop\Stopwatch\src\main.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEF
-                    -INE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\Users\cardy\Desktop\Stopwatch\inc;C:\Users\cardy\Desktop\Stopwatch\i
-                    -nc\config;C:\Users\cardy\Desktop\Stopwatch\inc\graphics;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//k
-                    -its/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;C:/SiliconL
-                    -abs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;C:/SiliconLabs/SimplicityStu
-                    -dio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;C:/SiliconLabs/SimplicityStudio/v4/d
-                    -eveloper/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;C:/SiliconLabs/SimplicityStudio/v4/developer/s
-                    -dks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Dev
-                    -ice/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\src\mai
+                    -INE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\Users\cardy\Desktop\Stopwatch\inc\graphics;C:\Users\cardy\Desktop\St
+                    -opwatch\inc;C:\Users\cardy\Desktop\Stopwatch\inc\config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//k
+                    -its/common/drivers/efm8_memory_lcd/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/driver
+                    -s/efm8_memory_lcd/inc/graphics;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_m
+                    -emory_lcd/inc/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/Simpl
+                    -icityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/s
+                    -dks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/
+                    -inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc) PRINT(.\src\mai
                     -n.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\main.OBJ)
 
 line level    source
@@ -63,7 +63,7 @@ line level    source
   44          // Timer2 - 2 MHz (SPI CS delay)
   45          // Timer3 - 1 kHz (1 ms tick)
   46          // P2.6 - Display CS (Active High)
-C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 16:30:59 PAGE 2   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:22:53 PAGE 2   
 
   47          // P0.6 - SCK
   48          // P1.0 - MOSI
@@ -74,7 +74,7 @@ line level    source
   53          // P3.4 - Display enable
   54          //
   55          //-----------------------------------------------------------------------------
-  56          
+  56          #include <SI_EFM8BB3_Register_Enums.h>
   57          #include "bsp.h"
   58          #include "pwr.h"
   59          
@@ -85,121 +85,148 @@ line level    source
   64          #include <string.h>
   65          #include<stdlib.h>
   66          
-  67          
-  68          int toggle =0;
-  69          int toggle2=0;
+  67          // Push button assignments
+  68          #define UI_BTN_MENU   (1 << 0)
+  69          #define UI_BTN_SELECT (1 << 1)
   70          
-  71          // Read and return push button status
-  72          uint8_t UI_getButtons(void)
-  73          {
-  74   1        uint8_t status = 0;
-  75   1        if (BSP_PB0 == BSP_PB_PRESSED && toggle == 0) {
-  76   2          status = 1;
-  77   2          toggle=1;
-  78   2        }
-  79   1        return status;
-  80   1      }
-  81          
-  82          // Port Match ISR - Triggered on leading edge of UI_BTN_SELECT.
-  83          SI_INTERRUPT (PMATCH_ISR, PMATCH_IRQn)
-  84          {
-  85   1        // Turn on LED whenever UI_BTN_SELECT is pressed
-  86   1        BSP_LED_G = BSP_LED_ON;
-  87   1      }
-  88          
-  89          int ms=0;
-  90          int sec=0;
-  91          int minute=0;
-  92          int hour=0;
-  93          
-  94          void main(void)
-  95          {
-  96   1              int nxtline=0;
-  97   1              int lap=0;
-  98   1      
-  99   1        // Initialize the device
- 100   1        enter_DefaultMode_from_RESET();
- 101   1      
- 102   1        // Start with the LED on
- 103   1        BSP_LED_G = BSP_LED_ON;
- 104   1      
- 105   1        // Enable all interrupts
- 106   1        IE_EA = 1;
- 107   1      
- 108   1        if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 0) {
- 109   2              toggle2=1;
-C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 16:30:59 PAGE 3   
+  71          
+  72          int toggle=0;
+  73          int toggle2=0;
+  74          
+  75          // Read and return push button status
+  76          uint8_t UI_getButtons(void)
+  77          {
+  78   1        uint8_t status = 0;
+  79   1        if (BSP_PB0 == BSP_PB_PRESSED && toggle == 0) {
+  80   2          status = 1;
+  81   2          toggle=1;
+  82   2        }
+  83   1        return status;
+  84   1      }
+  85          
+  86          int ms=0;
+  87          int sec=0;
+  88          int minute=0;
+  89          int hour=0;
+  90          // Port Match ISR - Triggered on leading edge of UI_BTN_SELECT.
+  91          SI_INTERRUPT (PMATCH_ISR, PMATCH_IRQn)
+  92          {
+  93   1        // Turn on LED whenever UI_BTN_SELECT is pressed
+  94   1              BSP_LED_G = BSP_LED_ON;
+  95   1      }
+  96          
+  97          SI_INTERRUPT (TIMER3_ISR, TIMER3_IRQn)
+  98          {
+  99   1          // Overflows every 1 ms
+ 100   1          TMR3CN0 &= ~TMR3CN0_TF3H__BMASK;
+ 101   1          if (ms<999){
+ 102   2                        ms++;
+ 103   2                }
+ 104   1                else if(sec<59){
+ 105   2                        ms=0;
+ 106   2                        sec++;
+ 107   2                }
+ 108   1                else if(minute<59){
+ 109   2                        sec=0;
+C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:22:53 PAGE 3   
 
- 110   2        }
- 111   1      
- 112   1        // Mainloop
- 113   1        while (toggle2)
- 114   1        {
- 115   2                char strms[4];
- 116   2                char strsec[3];
- 117   2                char strmin[3];
- 118   2                char strhour[3];
- 119   2                char strtime[16];
- 120   2                sprintf(strhour, "%i", hour);
- 121   2                sprintf(strmin,"%i",minute);
- 122   2                sprintf(strsec, "%i", sec);
- 123   2                sprintf(strms,"%i",ms);
- 124   2                strcpy(strtime, "Time:");
- 125   2                strcat(strtime, strhour);
- 126   2                strcat(strtime,":");
- 127   2                strcat(strtime,strmin);
- 128   2                strcat(strtime,":");
- 129   2                strcat(strtime,strsec);
- 130   2                strcat(strtime,":");
- 131   2                strcat(strtime,strms);
- 132   2      
- 133   2                DrawScreenText(strtime,0);
- 134   2                if (ms<999){
- 135   3                        ms++;
- 136   3                }
- 137   2                else if(sec<59){
- 138   3                        ms=0;
- 139   3                        sec++;
- 140   3                }
- 141   2                else if(minute<59){
- 142   3                        sec=0;
- 143   3                        minute++;
- 144   3                }
- 145   2                else{
- 146   3                        minute=0;
- 147   3                        hour++;
- 148   3                }
- 149   2                if (UI_getButtons() == 1) {
- 150   3                        char strlap[3]="";
- 151   3                        char lapname[19]="";
- 152   3                        nxtline=nxtline+8;
- 153   3                        lap++;
- 154   3                        sprintf(strlap,"%i",lap);
- 155   3                        strcat(lapname, "Lap ");
- 156   3                        strcat(lapname, strlap);
- 157   3                        strcat(lapname,":");
- 158   3                        strcat(lapname,strtime);
- 159   3                        DrawScreenText(lapname,nxtline);
- 160   3                        if (nxtline==120){
- 161   4                                nxtline=0;
- 162   4                        }
- 163   3      
- 164   3                }
- 165   2                if (BSP_PB0 == !BSP_PB_PRESSED && toggle == 1) {
- 166   3                                        toggle=0;
- 167   3                }
- 168   2                if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 1) {
- 169   3                                        toggle2=0;
- 170   3                }
- 171   2        }
- 172   1      }
-C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 16:30:59 PAGE 4   
+ 110   2                        minute++;
+ 111   2                }
+ 112   1                else{
+ 113   2                        minute=0;
+ 114   2                        hour++;
+ 115   2                }
+ 116   1      }
+ 117          
+ 118          
+ 119          void main(void)
+ 120          {
+ 121   1              int nxtline=8;
+ 122   1              int lap=0;
+ 123   1      
+ 124   1        // Initialize the device
+ 125   1        enter_DefaultMode_from_RESET();
+ 126   1      
+ 127   1        // Start with the LED on
+ 128   1        BSP_LED_G = BSP_LED_ON;
+ 129   1      
+ 130   1        // Enable all interrupts
+ 131   1        IE_EA = 1;
+ 132   1      
+ 133   1        if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 0) {
+ 134   2              toggle2=1;
+ 135   2        }
+ 136   1      
+ 137   1        // Mainloop
+ 138   1        while (toggle2)
+ 139   1        {
+ 140   2                char strms[4];
+ 141   2                char strsec[3];
+ 142   2                char strmin[3];
+ 143   2                char strhour[3];
+ 144   2                char strtime[16];
+ 145   2                sprintf(strhour, "%i", hour);
+ 146   2                sprintf(strmin,"%i",minute);
+ 147   2                sprintf(strsec, "%i", sec);
+ 148   2                sprintf(strms,"%i",ms);
+ 149   2                DrawScreenText("Time",0);
+ 150   2                strcpy(strtime, strhour);
+ 151   2                strcat(strtime,":");
+ 152   2                strcat(strtime,strmin);
+ 153   2                strcat(strtime,":");
+ 154   2                strcat(strtime,strsec);
+ 155   2                strcat(strtime,":");
+ 156   2                strcat(strtime,strms);
+ 157   2      
+ 158   2                DrawScreenText(strtime,8);
+ 159   2                TMR3CN0 &= ~TMR3CN0_TF3H__BMASK;
+ 160   2      
+ 161   2                /*if (ms<999){
+ 162   2                        ms++;
+ 163   2                }
+ 164   2                else if(sec<59){
+ 165   2                        ms=0;
+ 166   2                        sec++;
+ 167   2                }
+ 168   2                else if(minute<59){
+ 169   2                        sec=0;
+ 170   2                        minute++;
+ 171   2                }
+ 172   2                else{
+C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:22:53 PAGE 4   
 
+ 173   2                        minute=0;
+ 174   2                        hour++;
+ 175   2                }*/
+ 176   2                if (UI_getButtons() == 1) {
+ 177   3                        char strlap[3]="";
+ 178   3                        char lapname[19]="";
+ 179   3                        nxtline=nxtline+8;
+ 180   3                        lap++;
+ 181   3                        sprintf(strlap,"%i",lap);
+ 182   3                        strcat(lapname, "Lap ");
+ 183   3                        strcat(lapname, strlap);
+ 184   3                        strcat(lapname,":");
+ 185   3                        strcat(lapname,strtime);
+ 186   3                        DrawScreenText(lapname,nxtline);
+ 187   3                        if (nxtline==120){
+ 188   4                                nxtline=8;
+ 189   4                        }
+ 190   3      
+ 191   3                }
+ 192   2                if (BSP_PB0 == !BSP_PB_PRESSED && toggle == 1) {
+ 193   3                                        toggle=0;
+ 194   3                }
+ 195   2                if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 1) {
+ 196   3                                        toggle2=0;
+ 197   3                }
+ 198   2        }
+ 199   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =    627    ----
-   CONSTANT SIZE    =     38    ----
+   CODE SIZE        =    644    ----
+   CONSTANT SIZE    =     37    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
    DATA SIZE        =     12      55

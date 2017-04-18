@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 1   
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE RENDER
@@ -6,16 +6,15 @@ OBJECT MODULE PLACED IN .\lib\bsp\efm8_memory_lcd\src\render.OBJ
 COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\SiliconLabs\S
                     -implicityStudio\v4\developer\sdks\8051\v4.0.3\kits\common\drivers\efm8_memory_lcd\src\render.c OMF2 SMALL DEBUG OBJECTEX
                     -TEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\U
-                    -sers\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8B
-                    -B3_PowerModes_2_2_2\inc\config;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\graphics;C:/Sil
-                    -iconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sd
-                    -ks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/commo
-                    -n/drivers/efm8_memory_lcd/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_me
-                    -mory_lcd/inc/graphics;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd
-                    -/inc/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;C:/Silic
-                    -onLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/devel
-                    -oper/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\lib\bsp\efm8_memory_lcd\src\render.lst) COND PAGEWIDTH(120) PAGELENGT
-                    -H(65) OBJECT(.\lib\bsp\efm8_memory_lcd\src\render.OBJ)
+                    -sers\cardy\Desktop\Stopwatch\inc\graphics;C:\Users\cardy\Desktop\Stopwatch\inc;C:\Users\cardy\Desktop\Stopwatch\inc\conf
+                    -ig;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;C:/SiliconLabs
+                    -/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;C:/SiliconLabs/Simplic
+                    -ityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;C:/SiliconLabs/SimplicityStudio/
+                    -v4/developer/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8B
+                    -B3_SLSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconL
+                    -abs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks
+                    -/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc) PRINT(.\lib\bsp\efm8_memory_lcd\src\render.lst) COND PAGEWIDTH(120) 
+                    -PAGELENGTH(65) OBJECT(.\lib\bsp\efm8_memory_lcd\src\render.OBJ)
 
 line level    source
 
@@ -63,9 +62,9 @@ line level    source
   42          /***************************************************************************//**
   43           * @brief Return the size of the string in pixels
   44           *
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 2   
-
   45           * @param str a null-terminated string
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 2   
+
   46           *
   47           * @return The width of a string in pixels as rendered by ::RENDER_StrLine()
   48           *
@@ -128,9 +127,9 @@ line level    source
  105           * @param xstart the starting x-position of the line segment [0, ::DISP_WIDTH)
  106           * @param xstop the stopping x-position of the line segment [0, ::DISP_WIDTH)
  107           *
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 3   
-
  108           *****************************************************************************/
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 3   
+
  109          void RENDER_LineSegmentLine(
  110                  SI_VARIABLE_SEGMENT_POINTER(line, uint8_t, RENDER_LINE_SEG),
  111                  uint8_t xstart,
@@ -193,9 +192,9 @@ line level    source
  168           *
  169           * ~~~{.c}
  170           * for (y = 0; y < FONT_HEIGHT; y++)
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 4   
-
  171           * {
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 4   
+
  172           *    RENDER_StrLine(line, 3, y, "TEST");
  173           *    DISP_WriteLine(4+y, line);
  174           * }
@@ -258,9 +257,9 @@ line level    source
  231   2              *line16 &= ~(0xFF00 >> posx % 8);
  232   2              *line16 |= (((uint16_t)font_byte << 8) >> (posx % 8));
  233   2      #endif
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 5   
-
  234   2      
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 5   
+
  235   2              str++;
  236   2              posx += FONT_WIDTH;
  237   2          }
@@ -323,9 +322,9 @@ line level    source
  294           * @param fontScale can be enlarged from 2x to 4x. However, if larger than 5x, this
  295           *        function only renders 4x
  296           *
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 6   
-
  297           ******************************************************************************/
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 6   
+
  298          #if RENDER_LARGE_STR_LINE_BUILD
               void RENDER_Large_StrLine(
                       SI_VARIABLE_SEGMENT_POINTER(line, uint8_t, RENDER_LINE_SEG),
@@ -388,9 +387,9 @@ line level    source
                                       enlarged_font_byte = (enlarged_font_byte >> fontScale);
                               }
                               font_byte = font_byte >> 1;
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 7   
-
                       }
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 7   
+
               
                       for(i = 0; i < fontScale; i++)  //Number of bytes of a 32 bit variable
                       {
@@ -453,9 +452,9 @@ line level    source
               
                       font_byte = thinfont_numeric_bits[(c - '/') + thinfont_numeric_width / 8 * posy];
               
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 8   
-
                       enlarged_font_byte = 0;
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 8   
+
                       for( i = 0; i < 8; i++) //for every bit in font_byte
                       {
                               if(font_byte & 0x01)
@@ -518,9 +517,9 @@ line level    source
  483           * 01|                        |
  484           * 02|      _____             |
  485           * 03|     |     |< y=WIDTH   |
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 9   
-
  486           * 04|     ||--- |            |
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 9   
+
  487           * 05|     |   _ |            |
  488           * 06|     ||_| ||            |
  489           * 07|     |     |< y=WIDTH/2 |
@@ -583,9 +582,9 @@ line level    source
                   charIndex = posy / FONT_WIDTH;
                   charRow = posy % FONT_WIDTH;
               
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 10  
-
                   while (str[len++] != 0);
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 10  
+
                   len--;
                   
                   if (charIndex >= len)
@@ -648,9 +647,9 @@ line level    source
  608                  SI_VARIABLE_SEGMENT_POINTER(sprite, uint8_t, RENDER_SPRITE_SEG),
  609                  uint8_t spriteWidth)
  610          {
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 11  
-
  611   1          uint8_t i;
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 11  
+
  612   1          uint8_t sprite_byte;
  613   1      
  614   1          SI_VARIABLE_SEGMENT_POINTER(line16, uint16_t, RENDER_LINE_SEG);
@@ -713,9 +712,9 @@ line level    source
  671                  SI_VARIABLE_SEGMENT_POINTER(sprite, uint8_t, RENDER_SPRITE_SEG),
  672                  uint8_t spriteWidth)
  673          {
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 12  
-
  674   1          uint8_t i;
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 12  
+
  675   1          uint8_t sprite_byte;
  676   1      
  677   1          SI_VARIABLE_SEGMENT_POINTER(line16, uint16_t, RENDER_LINE_SEG);
@@ -778,9 +777,9 @@ MODULE INFORMATION:   STATIC OVERLAYABLE
    IDATA SIZE       =   ----    ----
    BIT SIZE         =   ----    ----
    EDATA SIZE       =   ----    ----
-C51 COMPILER V9.53.0.0   RENDER                                                            04/10/2017 19:13:05 PAGE 13  
-
    HDATA SIZE       =   ----    ----
+C51 COMPILER V9.53.0.0   RENDER                                                            04/17/2017 20:18:21 PAGE 13  
+
    XDATA CONST SIZE =   ----    ----
    FAR CONST SIZE   =   ----    ----
 END OF MODULE INFORMATION.

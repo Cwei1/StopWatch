@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 1   
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE SPI_0
@@ -6,16 +6,15 @@ OBJECT MODULE PLACED IN .\lib\efm8bb3\peripheralDrivers\src\spi_0.OBJ
 COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\SiliconLabs\S
                     -implicityStudio\v4\developer\sdks\8051\v4.0.3\Device\EFM8BB3\peripheral_driver\src\spi_0.c OMF2 SMALL DEBUG OBJECTEXTEND
                     - ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\Users
-                    -\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_P
-                    -owerModes_2_2_2\inc\config;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\graphics;C:/Silicon
-                    -Labs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8
-                    -051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/dr
-                    -ivers/efm8_memory_lcd/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory
-                    -_lcd/inc/graphics;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc
-                    -/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;C:/SiliconLa
-                    -bs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer
-                    -/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\lib\efm8bb3\peripheralDrivers\src\spi_0.lst) COND PAGEWIDTH(120) PAGELENG
-                    -TH(65) OBJECT(.\lib\efm8bb3\peripheralDrivers\src\spi_0.OBJ)
+                    -\cardy\Desktop\Stopwatch\inc\graphics;C:\Users\cardy\Desktop\Stopwatch\inc;C:\Users\cardy\Desktop\Stopwatch\inc\config;C
+                    -:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;C:/SiliconLabs/Sim
+                    -plicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;C:/SiliconLabs/SimplicityS
+                    -tudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;C:/SiliconLabs/SimplicityStudio/v4/d
+                    -eveloper/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8BB3_S
+                    -LSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/
+                    -SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/805
+                    -1/v4.0.3//Device/EFM8BB3/peripheral_driver/inc) PRINT(.\lib\efm8bb3\peripheralDrivers\src\spi_0.lst) COND PAGEWIDTH(120)
+                    - PAGELENGTH(65) OBJECT(.\lib\efm8bb3\peripheralDrivers\src\spi_0.OBJ)
 
 line level    source
 
@@ -63,9 +62,9 @@ line level    source
   42          // flag to indicate that init vars (above) are valid.  If they are
   43          // not valid then a special one-time init will be called to set them
   44          static bool initIsValid = false;
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 2   
-
   45          
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 2   
+
   46          // ----------------------------------------------------------------------------
   47          // Initialize internal state variables.  This is used if init API is
   48          // not called.
@@ -128,9 +127,9 @@ line level    source
  105   1      }
  106          
  107          // ----------------------------------------------------------------------------
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 3   
-
  108          // Write a byte, waiting for transmit buffer to be empty
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 3   
+
  109          // ----------------------------------------------------------------------------
  110          void SPI0_pollWriteByte(uint8_t value)
  111          {
@@ -193,9 +192,9 @@ line level    source
  168                                                        EFM8PDL_SPI0_RX_SEGTYPE),
  169                            SPI0_TransferDirection_t dir,
  170                            uint8_t xferCount)
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 4   
-
  171          {
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 4   
+
  172   1        uint8_t txCount = xferCount;
  173   1        bool checkNss = false;
  174   1        DECL_PAGE;
@@ -258,9 +257,9 @@ line level    source
  231   3            else
  232   3            {
  233   4              SPI0DAT = 0;
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 5   
-
  234   4            }
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 5   
+
  235   3      
  236   3            --txCount;
  237   3          }
@@ -323,9 +322,9 @@ line level    source
  294          // Check if SPI is busy with a transfer in progress.
  295          // ----------------------------------------------------------------------------
  296          bool SPI0_isBusy(void)
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 6   
-
  297          {
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 6   
+
  298   1        uint8_t count = 0;
  299   1        bool ret = false;
  300   1        DECL_PAGE;
@@ -388,9 +387,9 @@ line level    source
  357          // ----------------------------------------------------------------------------
  358          bool SPI0_isShiftEmpty(void)
  359          {
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 7   
-
  360   1        bool ret;
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 7   
+
  361   1        DECL_PAGE;
  362   1      
  363   1        SET_PAGE(SPI_SFR_PAGE);
@@ -453,9 +452,9 @@ line level    source
  420   1        SPI0CN0 &= ~0xF0;
  421   1        SPI0CN0_SPIEN = 1;
  422   1      
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 8   
-
  423   1        RESTORE_PAGE();
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 8   
+
  424   1      }
  425          
  426          // ----------------------------------------------------------------------------
@@ -518,9 +517,9 @@ line level    source
  483   2          ret = true;
  484   2        }
  485   1        SFRPAGE = savedPage;
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 9   
-
  486   1        return ret;
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 9   
+
  487   1      }
  488          
  489          // ----------------------------------------------------------------------------
@@ -583,9 +582,9 @@ line level    source
  546   1        // Set the TX and RX threshold fields
  547   1        fifoCtrl = SPI0FCN0;
  548   1        fifoCtrl &= ~(SPI0FCN0_TXTH__FMASK | SPI0FCN0_RXTH__FMASK);
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 10  
-
  549   1        fifoCtrl |= ((txThreshold & 3) << SPI0FCN0_TXTH__SHIFT)
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 10  
+
  550   1                  | ((rxThreshold & 3) << SPI0FCN0_RXTH__SHIFT);
  551   1      
  552   1        // Only change the RX timeout if in slave mode
@@ -648,9 +647,9 @@ line level    source
  609   1      
  610   1        // Check to see if run-time mode variables have been set up
  611   1        if (!initIsValid)
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 11  
-
  612   1        {
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 11  
+
  613   2          SPI0_internalInit();
  614   2        }
  615   1      
@@ -713,9 +712,9 @@ line level    source
                     ++pTxBuf;
                   }
               
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 12  
-
                   // Otherwise no tx data, so just stuff zeroes
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 12  
+
                   else
                   {
                     SPI0DAT = 0;
@@ -778,9 +777,9 @@ line level    source
  735   1        uint8_t intFlags;
  736   1        uint8_t fifoFlags;
  737   1      
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 13  
-
  738   1        // This device has SFRPAGE autosave so we can change page here and
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 13  
+
  739   1        // it will automatically be restored when interrupt exits
  740   1        SFRPAGE = SPI_SFR_PAGE;
  741   1      
@@ -843,9 +842,9 @@ line level    source
  798   2      
  799   2          // Write bytes if there are more TX bytes to send and the
  800   2          // TX buffer is not full
-C51 COMPILER V9.53.0.0   SPI_0                                                             04/10/2017 19:13:04 PAGE 14  
-
  801   2      #if EFM8PDL_SPI0_USE_PIPELINE == 1
+C51 COMPILER V9.53.0.0   SPI_0                                                             04/17/2017 20:18:20 PAGE 14  
+
                   while (txCountRemaining && SPI0CN0_TXNF)
               #else
  804   2          if (txCountRemaining && SPI0CN0_TXNF)

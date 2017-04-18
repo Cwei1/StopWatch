@@ -1,4 +1,4 @@
-LX51 LINKER/LOCATER V4.66.30.0                                                          04/17/2017  16:30:59  PAGE 1
+LX51 LINKER/LOCATER V4.66.30.0                                                          04/17/2017  20:22:53  PAGE 1
 
 
 LX51 LINKER/LOCATER V4.66.30.0, INVOKED BY:
@@ -64,13 +64,13 @@ ACTIVE MEMORY CLASSES OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 BASE        START       END         USED      MEMORY CLASS
 ==========================================================
 C:000000H   C:000000H   C:00FBFEH             ECODE
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 2
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 2
 
 
 B00:0000H   C:000000H   C:00FBFEH             HCONST
 X:000000H   X:000000H   X:000FFFH             XDATA
 X:000000H   X:000000H   X:000FFFH             HDATA
-C:000000H   C:000000H   C:00FFFFH   000E15H   CODE
+C:000000H   C:000000H   C:00FFFFH   000E12H   CODE
 I:000000H   I:000000H   I:00007FH   00007EH   DATA
 C:000000H   C:000000H   C:00FFFFH   000B20H   CONST
 X:000000H   X:000000H   X:0000FFH   000014H   PDATA
@@ -110,44 +110,44 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
 000043H   000045H   000003H   BYTE   OFFS..   CODE           ?MAIN?00043
 000046H   000071H   00002CH   BYTE   UNIT     CODE           ?PR?_BITREVERSE?DISP
 000072H   000072H   000001H   ---    ---      **GAP**
-000073H   000075H   000003H   BYTE   OFFS..   CODE           ?TICK?00073
+000073H   000075H   000003H   BYTE   OFFS..   CODE           ?MAIN?00073
 000076H   0003D1H   00035CH   BYTE   UNIT     CODE           ?PR?PRINTF?PRINTF
 0003D2H   00063EH   00026DH   BYTE   UNIT     CODE           ?C?LIB_CODE
-00063FH   000899H   00025BH   BYTE   UNIT     CODE           ?PR?MAIN?MAIN
-00089AH   00095CH   0000C3H   BYTE   UNIT     CODE           ?PR?_RENDER_STRLINE?RENDER
-00095DH   0009F3H   000097H   BYTE   UNIT     CODE           ?PR?SPI0_ISR?SPI_0
-0009F4H   000A7FH   00008CH   BYTE   UNIT     CODE           ?C_C51STARTUP
-000A80H   000AE8H   000069H   BYTE   UNIT     CODE           ?PR?_DRAWSCREENTEXT?DRAW
-000AE9H   000B47H   00005FH   BYTE   UNIT     CODE           ?PR?TIMER2_ISR?SPI
-000B48H   000B9FH   000058H   BYTE   UNIT     CODE           ?PR?_STRCAT?STRCAT
-000BA0H   000BF1H   000052H   BYTE   UNIT     CODE           ?PR?_SPI0_TRANSFER?SPI_0
-000BF2H   000C33H   000042H   BYTE   UNIT     CODE           ?PR?_DISP_WRITELINE?DISP
-000C34H   000C74H   000041H   BYTE   UNIT     CODE           ?C_INITSEG
-000C75H   000CB5H   000041H   BYTE   UNIT     CODE           ?PR?_SPI_STARTTRANSFER?SPI
-000CB6H   000CDBH   000026H   BYTE   UNIT     CODE           ?CO?MAIN
-000CDCH   000D00H   000025H   BYTE   UNIT     CODE           ?PR?_RENDER_GETSTRSIZE?RENDER
-000D01H   000D25H   000025H   BYTE   UNIT     CODE           ?PR?ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D26H   000D46H   000021H   BYTE   UNIT     CODE           ?PR?_SOFTWAREVCOMTOGGLE?DISP
-000D47H   000D62H   00001CH   BYTE   UNIT     CODE           ?PR?_RENDER_CLRLINESEGMENT?DRAW
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 3
+00063FH   00083CH   0001FEH   BYTE   UNIT     CODE           ?PR?MAIN?MAIN
+00083DH   0008FFH   0000C3H   BYTE   UNIT     CODE           ?PR?_RENDER_STRLINE?RENDER
+000900H   000996H   000097H   BYTE   UNIT     CODE           ?PR?SPI0_ISR?SPI_0
+000997H   000A22H   00008CH   BYTE   UNIT     CODE           ?C_C51STARTUP
+000A23H   000A8DH   00006BH   BYTE   UNIT     CODE           ?PR?TIMER3_ISR?MAIN
+000A8EH   000AF6H   000069H   BYTE   UNIT     CODE           ?PR?_DRAWSCREENTEXT?DRAW
+000AF7H   000B55H   00005FH   BYTE   UNIT     CODE           ?PR?TIMER2_ISR?SPI
+000B56H   000BADH   000058H   BYTE   UNIT     CODE           ?PR?_STRCAT?STRCAT
+000BAEH   000BFFH   000052H   BYTE   UNIT     CODE           ?PR?_SPI0_TRANSFER?SPI_0
+000C00H   000C41H   000042H   BYTE   UNIT     CODE           ?PR?_DISP_WRITELINE?DISP
+000C42H   000C82H   000041H   BYTE   UNIT     CODE           ?C_INITSEG
+000C83H   000CC3H   000041H   BYTE   UNIT     CODE           ?PR?_SPI_STARTTRANSFER?SPI
+000CC4H   000CE8H   000025H   BYTE   UNIT     CODE           ?PR?_RENDER_GETSTRSIZE?RENDER
+000CE9H   000D0DH   000025H   BYTE   UNIT     CODE           ?PR?ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000D0EH   000D32H   000025H   BYTE   UNIT     CODE           ?CO?MAIN
+000D33H   000D53H   000021H   BYTE   UNIT     CODE           ?PR?_SOFTWAREVCOMTOGGLE?DISP
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 3
 
 
-000D63H   000D7BH   000019H   BYTE   UNIT     CODE           ?PR?TIMER16_3_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000D7CH   000D91H   000016H   BYTE   UNIT     CODE           ?PR?GETTICKCOUNT?TICK
-000D92H   000DA5H   000014H   BYTE   UNIT     CODE           ?PR?SPI0_TRANSFERCOMPLETECB?SPI
-000DA6H   000DB7H   000012H   BYTE   UNIT     CODE           ?PR?UI_GETBUTTONS?MAIN
-000DB8H   000DC8H   000011H   BYTE   UNIT     CODE           ?PR?SPI0_INTERNALINIT?SPI_0
-000DC9H   000DD8H   000010H   BYTE   UNIT     CODE           ?PR?TIMER3_ISR?TICK
-000DD9H   000DE2H   00000AH   BYTE   UNIT     CODE           ?PR?WDT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000DE3H   000DECH   00000AH   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000DEDH   000DF6H   00000AH   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000DF7H   000DFFH   000009H   BYTE   UNIT     CODE           ?PR?CLOCK_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000E00H   000E06H   000007H   BYTE   UNIT     CODE           ?PR?INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000E07H   000E0DH   000007H   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000E0EH   000E14H   000007H   BYTE   UNIT     CODE           ?PR?PORTS_3_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
-000E15H   000E17H   000003H   BYTE   UNIT     CODE           ?PR?PMATCH_ISR?MAIN
-000E18H   001617H   000800H   BYTE   UNIT     CONST          ?CO?DRAW
-001618H   001937H   000320H   BYTE   UNIT     CONST          ?CO?RENDER
+000D54H   000D6FH   00001CH   BYTE   UNIT     CODE           ?PR?_RENDER_CLRLINESEGMENT?DRAW
+000D70H   000D88H   000019H   BYTE   UNIT     CODE           ?PR?TIMER16_3_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000D89H   000D9EH   000016H   BYTE   UNIT     CODE           ?PR?GETTICKCOUNT?TICK
+000D9FH   000DB2H   000014H   BYTE   UNIT     CODE           ?PR?SPI0_TRANSFERCOMPLETECB?SPI
+000DB3H   000DC4H   000012H   BYTE   UNIT     CODE           ?PR?UI_GETBUTTONS?MAIN
+000DC5H   000DD5H   000011H   BYTE   UNIT     CODE           ?PR?SPI0_INTERNALINIT?SPI_0
+000DD6H   000DDFH   00000AH   BYTE   UNIT     CODE           ?PR?WDT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000DE0H   000DE9H   00000AH   BYTE   UNIT     CODE           ?PR?PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000DEAH   000DF3H   00000AH   BYTE   UNIT     CODE           ?PR?PORTS_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000DF4H   000DFCH   000009H   BYTE   UNIT     CODE           ?PR?CLOCK_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000DFDH   000E03H   000007H   BYTE   UNIT     CODE           ?PR?INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000E04H   000E0AH   000007H   BYTE   UNIT     CODE           ?PR?PORTS_1_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000E0BH   000E11H   000007H   BYTE   UNIT     CODE           ?PR?PORTS_3_ENTER_DEFAULTMODE_FROM_RESET?INITDEVICE
+000E12H   000E14H   000003H   BYTE   UNIT     CODE           ?PR?PMATCH_ISR?MAIN
+000E15H   001614H   000800H   BYTE   UNIT     CONST          ?CO?DRAW
+001615H   001934H   000320H   BYTE   UNIT     CONST          ?CO?RENDER
 
 * * * * * * * * * * *  X D A T A   M E M O R Y  * * * * * * * * * * * * *
 000000H   000013H   000014H   BYTE   INPAGE   PDATA          ?PD?SPI
@@ -194,7 +194,7 @@ START     STOP      LENGTH    ALIGN  RELOC    MEMORY CLASS   SEGMENT NAME
    *DEL*:           00000FH   BYTE   UNIT     CODE           ?PR?SPI0_ISRXEMPTY?SPI_0
    *DEL*:           000000H.1 BIT    UNIT     BIT            ?BI?SPI0_ISRXEMPTY?SPI_0
    *DEL*:           000036H   BYTE   UNIT     CODE           ?PR?_SPI0_INIT?SPI_0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 4
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 4
 
 
    *DEL*:           000000H.2 BIT    UNIT     BIT            ?BI?_SPI0_INIT?SPI_0
@@ -230,10 +230,6 @@ SPI0_INTERNALINIT/SPI_0                       ----- -----  ----- -----
 
 *** NEW ROOT ********************************
 
-TIMER3_ISR/TICK                               ----- -----  ----- -----
-
-*** NEW ROOT ********************************
-
 SPI0_ISR/SPI_0                                ----- -----  0027H 0027H
   +--> SPI0_TRANSFERCOMPLETECB/SPI
 
@@ -249,8 +245,8 @@ MAIN/MAIN                                     ----- -----  0028H 005EH
   +--> ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
   +--> ?CO?MAIN
   +--> PRINTF/PRINTF
-  +--> _STRCAT/STRCAT
   +--> _DRAWSCREENTEXT/DRAW
+  +--> _STRCAT/STRCAT
   +--> UI_GETBUTTONS/MAIN
 
 ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE       ----- -----  005FH 005FH
@@ -259,13 +255,13 @@ ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE       ----- -----  005FH 005FH
   +--> PORTS_1_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
   +--> PORTS_2_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
   +--> PORTS_3_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 5
-
-
   +--> PBCFG_0_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
   +--> CLOCK_0_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
   +--> TIMER16_3_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
   +--> SPI_0_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 5
+
+
   +--> INTERRUPT_0_ENTER_DEFAULTMODE_FROM_RESET/INITDEVICE
 
 WDT_0_ENTER_DEFAULTMODE_FROM_RESET/INITD+     ----- -----  ----- -----
@@ -305,8 +301,6 @@ PRINTF/PRINTF                                 20H.0 21H.0  005FH 0072H
 
 PUTCHAR/PUTCHAR                               ----- -----  ----- -----
 
-_STRCAT/STRCAT                                ----- -----  005FH 0067H
-
 _DRAWSCREENTEXT/DRAW                          ----- -----  005FH 0064H
   +--> _RENDER_GETSTRSIZE/RENDER
   +--> ?CO?DRAW
@@ -324,14 +318,14 @@ _RENDER_STRLINE/RENDER                        ----- -----  0065H 006BH
   +--> ?CO?RENDER
 
 ?CO?RENDER                                    ----- -----  ----- -----
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 6
-
-
 
 _DISP_WRITELINE/DISP                          ----- -----  0065H 007CH
   +--> _SOFTWAREVCOMTOGGLE/DISP
   +--> _BITREVERSE/DISP
   +--> _SPI_STARTTRANSFER/SPI
+
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 6
+
 
 _SOFTWAREVCOMTOGGLE/DISP                      ----- -----  007DH 007DH
   +--> GETTICKCOUNT/TICK
@@ -342,6 +336,8 @@ _BITREVERSE/DISP                              ----- -----  ----- -----
 
 _SPI_STARTTRANSFER/SPI                        ----- -----  007DH 007FH
 
+_STRCAT/STRCAT                                ----- -----  005FH 0067H
+
 UI_GETBUTTONS/MAIN                            ----- -----  ----- -----
 
 ?C_INITSEG                                    ----- -----  ----- -----
@@ -349,6 +345,10 @@ UI_GETBUTTONS/MAIN                            ----- -----  ----- -----
 *** NEW ROOT ********************************
 
 PMATCH_ISR/MAIN                               ----- -----  ----- -----
+
+*** NEW ROOT ********************************
+
+TIMER3_ISR/MAIN                               ----- -----  ----- -----
 
 
 
@@ -377,38 +377,38 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       01000609H   CODE     ---       ?C?PLDIIDATA
       010005DAH   CODE     ---       ?C?STRCPY
       00000000H   NUMBER   ---       ?C?XDATASEG
-      01000A3BH   CODE     ---       ?C_START
+      010009DEH   CODE     ---       ?C_START
       01000000H   CODE     NEAR LAB  ?C_STARTUP
       01000046H   CODE     ---       _BitReverse
 *DEL*:00000000H   CODE     ---       _DISP_ClearLine
-      01000BF2H   CODE     ---       _DISP_WriteLine
-      01000A80H   CODE     ---       _DrawScreenText
+      01000C00H   CODE     ---       _DISP_WriteLine
+      01000A8EH   CODE     ---       _DrawScreenText
       010000D8H   CODE     ---       _PRINTF
       010000D8H   CODE     ---       _PRINTF517
       01000003H   CODE     ---       _PUTCHAR
 *DEL*:00000000H   CODE     ---       _RENDER_ClrLine
-      01000CDCH   CODE     ---       _RENDER_GetStrSize
+      01000CC4H   CODE     ---       _RENDER_GetStrSize
 *DEL*:00000000H   CODE     ---       _RENDER_LineSegmentLine
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 7
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 7
 
 
 *DEL*:00000000H   CODE     ---       _RENDER_PixelLine
 *DEL*:00000000H   CODE     ---       _RENDER_SpriteLine
 *DEL*:00000000H   CODE     ---       _RENDER_SpriteLineForeground
-      0100089AH   CODE     ---       _RENDER_StrLine
-      01000D26H   CODE     ---       _SoftwareVcomToggle
+      0100083DH   CODE     ---       _RENDER_StrLine
+      01000D33H   CODE     ---       _SoftwareVcomToggle
 *DEL*:00000000H   CODE     ---       _SPI0_clearIntFlags
 *DEL*:00000000H   CODE     ---       _SPI0_configureFifo
 *DEL*:00000000H   CODE     ---       _SPI0_init
 *DEL*:00000000H   CODE     ---       _SPI0_pollTransfer
 *DEL*:00000000H   CODE     ---       _SPI0_pollWriteByte
 *DEL*:00000000H   CODE     ---       _SPI0_setClockDivider
-      01000BA0H   CODE     ---       _SPI0_transfer
+      01000BAEH   CODE     ---       _SPI0_transfer
 *DEL*:00000000H   CODE     ---       _SPI0_writeByte
-      01000C75H   CODE     ---       _SPI_StartTransfer
+      01000C83H   CODE     ---       _SPI_StartTransfer
       010000D2H   CODE     ---       _SPRINTF
       010000D2H   CODE     ---       _SPRINTF517
-      01000B48H   CODE     ---       _strcat
+      01000B56H   CODE     ---       _strcat
 *DEL*:00000000H   CODE     ---       _Wait
 *SFR* 000000E0H   DATA     BYTE      ACC
 *SFR* 000000E0H   DATA     BIT       ACC_ACC0
@@ -454,7 +454,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000F0H.2 DATA     BIT       B_B2
 *SFR* 000000F0H.3 DATA     BIT       B_B3
 *SFR* 000000F0H.4 DATA     BIT       B_B4
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 8
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 8
 
 
 *SFR* 000000F0H.5 DATA     BIT       B_B5
@@ -483,7 +483,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000E8H.6 DATA     BIT       CLIF0_C3FIF
 *SFR* 000000E8H.7 DATA     BIT       CLIF0_C3RIF
 *SFR* 000000A9H   DATA     BYTE      CLKSEL
-      01000DF7H   CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
+      01000DF4H   CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
 *SFR* 000000D1H   DATA     BYTE      CLOUT0
 *SFR* 000000B1H   DATA     BYTE      CLU0CF
 *SFR* 000000AFH   DATA     BYTE      CLU0FN
@@ -519,7 +519,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 00000093H   DATA     BYTE      DAC1CF0
 *SFR* 00000094H   DATA     BYTE      DAC1CF1
 *SFR* 0000008AH   DATA     BYTE      DAC1H
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 9
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 9
 
 
 *SFR* 00000089H   DATA     BYTE      DAC1L
@@ -561,9 +561,9 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000EDH   DATA     BYTE      EIP2
 *SFR* 000000F6H   DATA     BYTE      EIP2H
 *SFR* 000000E7H   DATA     BYTE      EMI0CN
-      01000D01H   CODE     ---       enter_DefaultMode_from_RESET
+      01000CE9H   CODE     ---       enter_DefaultMode_from_RESET
 *SFR* 000000B7H   DATA     BYTE      FLKEY
-      01000D7CH   CODE     ---       GetTickCount
+      01000D89H   CODE     ---       GetTickCount
 *SFR* 000000C7H   DATA     BYTE      HFO0CAL
 *SFR* 000000D6H   DATA     BYTE      HFO1CAL
 *SFR* 000000EFH   DATA     BYTE      HFOCN
@@ -584,12 +584,12 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000A8H.1 DATA     BIT       IE_ET0
 *SFR* 000000A8H.3 DATA     BIT       IE_ET1
 *SFR* 000000A8H.5 DATA     BIT       IE_ET2
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 10
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 10
 
 
 *SFR* 000000A8H   DATA     BIT       IE_EX0
 *SFR* 000000A8H.2 DATA     BIT       IE_EX1
-      01000E00H   CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
+      01000DFDH   CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
 *SFR* 000000B8H   DATA     BYTE      IP
 *SFR* 000000B8H.4 DATA     BIT       IP_PS0
 *SFR* 000000B8H.6 DATA     BIT       IP_PSPI0
@@ -649,7 +649,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000CCH   DATA     BYTE      P2SKIP
 *SFR* 000000B0H   DATA     BYTE      P3
 *SFR* 000000B0H   DATA     BIT       P3_B0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 11
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 11
 
 
 *SFR* 000000B0H.1 DATA     BIT       P3_B1
@@ -659,7 +659,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000B0H.7 DATA     BIT       P3_B7
 *SFR* 000000F4H   DATA     BYTE      P3MDIN
 *SFR* 0000009CH   DATA     BYTE      P3MDOUT
-      01000DE3H   CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
+      01000DE0H   CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
 *SFR* 000000F9H   DATA     WORD      PCA0
 *SFR* 0000009EH   DATA     BYTE      PCA0CENT
 *SFR* 0000009CH   DATA     BYTE      PCA0CLR
@@ -704,17 +704,17 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 00000087H   DATA     BYTE      PCON0
 *SFR* 000000CDH   DATA     BYTE      PCON1
 *SFR* 000000C1H   DATA     BYTE      PFE0CN
-      01000E15H   CODE     ---       PMATCH_ISR
-      01000DEDH   CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
-      01000E07H   CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
+      01000E12H   CODE     ---       PMATCH_ISR
+      01000DEAH   CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
+      01000E04H   CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
       0100002EH   CODE     ---       PORTS_2_enter_DefaultMode_from_RESET
-      01000E0EH   CODE     ---       PORTS_3_enter_DefaultMode_from_RESET
+      01000E0BH   CODE     ---       PORTS_3_enter_DefaultMode_from_RESET
 *SFR* 000000A0H   DATA     BYTE      PPAGE_SFR
 *SFR* 000000F6H   DATA     BYTE      PRTDRV
 *SFR* 0000008FH   DATA     BYTE      PSCTL
 *SFR* 000000AAH   DATA     BYTE      PSTAT0
 *SFR* 000000D0H   DATA     BYTE      PSW
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 12
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 12
 
 
 *SFR* 000000D0H.6 DATA     BIT       PSW_AC
@@ -779,7 +779,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000C5H   DATA     BYTE      SMB0RXLN
 *SFR* 000000ACH   DATA     BYTE      SMB0TC
 *SFR* 00000093H   DATA     BYTE      SMOD1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 13
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 13
 
 
 *SFR* 00000081H   DATA     BYTE      SP
@@ -791,7 +791,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *DEL*:00000000H   CODE     ---       SPI0_isBusy
 *DEL*:00000000H   CODE     ---       SPI0_isFifoRxReq
 *DEL*:00000000H   CODE     ---       SPI0_isFifoTxReq
-      0100095DH   CODE     ---       SPI0_ISR
+      01000900H   CODE     ---       SPI0_ISR
 *DEL*:00000000H   CODE     ---       SPI0_isRxEmpty
 *DEL*:00000000H   CODE     ---       SPI0_isShiftEmpty
 *DEL*:00000000H   CODE     ---       SPI0_isSlaveSelected
@@ -799,7 +799,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *DEL*:00000000H   CODE     ---       SPI0_pollReadByte
 *DEL*:00000000H   CODE     ---       SPI0_readByte
 *DEL*:00000000H   CODE     ---       SPI0_reset
-      01000D92H   CODE     ---       SPI0_transferCompleteCb
+      01000D9FH   CODE     ---       SPI0_transferCompleteCb
 *SFR* 000000A1H   DATA     BYTE      SPI0CFG
 *SFR* 000000A2H   DATA     BYTE      SPI0CKR
 *SFR* 000000F8H   DATA     BYTE      SPI0CN0
@@ -828,9 +828,9 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 00000088H.6 DATA     BIT       TCON_TR1
 *SFR* 0000008CH   DATA     BYTE      TH0
 *SFR* 0000008DH   DATA     BYTE      TH1
-      01000D63H   CODE     ---       TIMER16_3_enter_DefaultMode_from_RESET
-      01000AE9H   CODE     ---       TIMER2_ISR
-      01000DC9H   CODE     ---       TIMER3_ISR
+      01000D70H   CODE     ---       TIMER16_3_enter_DefaultMode_from_RESET
+      01000AF7H   CODE     ---       TIMER2_ISR
+      01000A23H   CODE     ---       TIMER3_ISR
 *SFR* 0000008AH   DATA     BYTE      TL0
 *SFR* 0000008BH   DATA     BYTE      TL1
 *SFR* 00000089H   DATA     BYTE      TMOD
@@ -844,7 +844,7 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000C8H.6 DATA     BIT       TMR2CN0_TF2L
 *SFR* 000000C8H.5 DATA     BIT       TMR2CN0_TF2LEN
 *SFR* 000000C8H.2 DATA     BIT       TMR2CN0_TR2
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 14
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 14
 
 
 *SFR* 000000FDH   DATA     BYTE      TMR2CN1
@@ -909,12 +909,12 @@ PUBLIC SYMBOLS OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 *SFR* 000000FAH   DATA     BYTE      UART1FCT
 *SFR* 0000009EH   DATA     BYTE      UART1LIN
 *SFR* 000000DAH   DATA     BYTE      UART1PCF
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 15
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 15
 
 
-      01000DA6H   CODE     ---       UI_getButtons
+      01000DB3H   CODE     ---       UI_getButtons
 *SFR* 000000FFH   DATA     BYTE      VDM0CN
-      01000DD9H   CODE     ---       WDT_0_enter_DefaultMode_from_RESET
+      01000DD6H   CODE     ---       WDT_0_enter_DefaultMode_from_RESET
 *SFR* 00000097H   DATA     BYTE      WDTCN
 *SFR* 000000E1H   DATA     BYTE      XBR0
 *SFR* 000000E2H   DATA     BYTE      XBR1
@@ -929,8 +929,8 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       ====================================================
       ---         MODULE    ---      ---       DISP
       0000001AH   PUBLIC    DATA     WORD      LastVcomToggle
-      01000BF2H   PUBLIC    CODE     ---       _DISP_WriteLine
-      01000D26H   PUBLIC    CODE     ---       _SoftwareVcomToggle
+      01000C00H   PUBLIC    CODE     ---       _DISP_WriteLine
+      01000D33H   PUBLIC    CODE     ---       _SoftwareVcomToggle
       01000046H   PUBLIC    CODE     ---       _BitReverse
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
@@ -974,7 +974,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000CAH   SFRSYM    DATA     BYTE      TMR2RLL
       000000FCH   SFRSYM    DATA     BYTE      PCA0CPH0
       00000092H   SFRSYM    DATA     BYTE      TMR3RLL
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 16
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 16
 
 
       000000EAH   SFRSYM    DATA     BYTE      PCA0CPH1
@@ -1039,7 +1039,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000E0H.1 SFRSYM    DATA     BIT       ACC_ACC1
       000000C9H   SFRSYM    DATA     BYTE      REG0CN
       000000CAH   SFRSYM    DATA     BYTE      CRC0IN
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 17
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 17
 
 
       000000B6H   SFRSYM    DATA     BYTE      CLU2CF
@@ -1104,7 +1104,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C8H.2 SFRSYM    DATA     BIT       SCON1_RBX
       00000091H   SFRSYM    DATA     BYTE      DAC0CF0
       000000BCH   SFRSYM    DATA     BYTE      ADC0CF0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 18
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 18
 
 
       000000C8H   SFRSYM    DATA     BIT       TMR2CN0_T2XCLK0
@@ -1169,7 +1169,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000FFH   SFRSYM    DATA     BYTE      I2C0ADM
       0000008AH   SFRSYM    DATA     BYTE      DAC1H
       00000090H.4 SFRSYM    DATA     BIT       BSP_LED_G
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 19
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 19
 
 
       00000088H.2 SFRSYM    DATA     BIT       DACGCF0_D1AMEN
@@ -1234,7 +1234,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C6H   SFRSYM    DATA     BYTE      CLEN0
       00000088H.1 SFRSYM    DATA     BIT       TCON_IE0
       000000A0H   SFRSYM    DATA     BIT       P2_B0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 20
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 20
 
 
       00000090H.1 SFRSYM    DATA     BIT       P1_B1
@@ -1299,7 +1299,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000098H.1 SFRSYM    DATA     BIT       SCON0_TI
       00000092H   SFRSYM    DATA     BYTE      SBUF1
       000000CDH   SFRSYM    DATA     BYTE      PCON1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 21
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 21
 
 
       000000C6H   SFRSYM    DATA     BYTE      ADC0LTH
@@ -1364,7 +1364,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C8H.5 SFRSYM    DATA     BIT       TMR2CN0_TF2LEN
       000000F8H.6 SFRSYM    DATA     BIT       SPI0CN0_WCOL
       000000F8H.2 SFRSYM    DATA     BIT       SPI0CN0_NSSMD0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 22
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 22
 
 
       000000D0H.7 SFRSYM    DATA     BIT       PSW_CY
@@ -1403,51 +1403,51 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       01000071H   LINE      CODE     ---       #49
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D26H   BLOCK     CODE     ---       LVL=0
+      01000D33H   BLOCK     CODE     ---       LVL=0
       0000007DH   SYMBOL    DATA     BYTE      cmd
-      01000D28H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000D35H   BLOCK     CODE     NEAR LAB  LVL=1
       00000006H   SYMBOL    DATA     WORD      tick
       ---         BLOCKEND  ---      ---       LVL=1
-      01000D26H   LINE      CODE     ---       #57
-      01000D28H   LINE      CODE     ---       #58
-      01000D28H   LINE      CODE     ---       #59
-      01000D2BH   LINE      CODE     ---       #61
-      01000D3DH   LINE      CODE     ---       #62
-      01000D3DH   LINE      CODE     ---       #64
-      01000D40H   LINE      CODE     ---       #66
-      01000D44H   LINE      CODE     ---       #67
-      01000D44H   LINE      CODE     ---       #69
-      01000D46H   LINE      CODE     ---       #70
+      01000D33H   LINE      CODE     ---       #57
+      01000D35H   LINE      CODE     ---       #58
+      01000D35H   LINE      CODE     ---       #59
+      01000D38H   LINE      CODE     ---       #61
+      01000D4AH   LINE      CODE     ---       #62
+      01000D4AH   LINE      CODE     ---       #64
+      01000D4DH   LINE      CODE     ---       #66
+      01000D51H   LINE      CODE     ---       #67
+      01000D51H   LINE      CODE     ---       #69
+      01000D53H   LINE      CODE     ---       #70
       ---         BLOCKEND  ---      ---       LVL=0
       00000007H   SYMBOL    DATA     BYTE      i
 
-      01000BF2H   BLOCK     CODE     ---       LVL=0
+      01000C00H   BLOCK     CODE     ---       LVL=0
       00000065H   SYMBOL    DATA     BYTE      row
       00000066H   SYMBOL    DATA     ---       line
-      01000BFAH   BLOCK     CODE     NEAR LAB  LVL=1
+      01000C08H   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      i
       00000069H   SYMBOL    DATA     ---       cmd
       ---         BLOCKEND  ---      ---       LVL=1
-      01000BF2H   LINE      CODE     ---       #157
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 23
+      01000C00H   LINE      CODE     ---       #157
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 23
 
 
-      01000BFAH   LINE      CODE     ---       #158
-      01000BFAH   LINE      CODE     ---       #163
-      01000C01H   LINE      CODE     ---       #164
-      01000C0AH   LINE      CODE     ---       #166
-      01000C0CH   LINE      CODE     ---       #167
-      01000C0CH   LINE      CODE     ---       #168
-      01000C21H   LINE      CODE     ---       #169
-      01000C25H   LINE      CODE     ---       #172
-      01000C28H   LINE      CODE     ---       #173
-      01000C2AH   LINE      CODE     ---       #176
+      01000C08H   LINE      CODE     ---       #158
+      01000C08H   LINE      CODE     ---       #163
+      01000C0FH   LINE      CODE     ---       #164
+      01000C18H   LINE      CODE     ---       #166
+      01000C1AH   LINE      CODE     ---       #167
+      01000C1AH   LINE      CODE     ---       #168
+      01000C2FH   LINE      CODE     ---       #169
+      01000C33H   LINE      CODE     ---       #172
+      01000C36H   LINE      CODE     ---       #173
+      01000C38H   LINE      CODE     ---       #176
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       RENDER
       00000065H   PUBLIC    DATA     BYTE      ?_RENDER_StrLine?BYTE
-      0100089AH   PUBLIC    CODE     ---       _RENDER_StrLine
-      01000CDCH   PUBLIC    CODE     ---       _RENDER_GetStrSize
+      0100083DH   PUBLIC    CODE     ---       _RENDER_StrLine
+      01000CC4H   PUBLIC    CODE     ---       _RENDER_GetStrSize
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -1494,7 +1494,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000098H.3 SFRSYM    DATA     BIT       SCON0_TB8
       000000F0H   SFRSYM    DATA     BIT       B_B0
       00000082H   SFRSYM    DATA     WORD      DP
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 24
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 24
 
 
       000000A2H   SFRSYM    DATA     BYTE      TMR4RLL
@@ -1559,7 +1559,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000A6H   SFRSYM    DATA     BYTE      CKCON1
       000000C8H.2 SFRSYM    DATA     BIT       TMR2CN0_TR2
       000000E0H.2 SFRSYM    DATA     BIT       ACC_ACC2
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 25
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 25
 
 
       000000BFH   SFRSYM    DATA     BYTE      CLU3CF
@@ -1624,7 +1624,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000093H   SFRSYM    DATA     BYTE      DAC1CF0
       00000092H   SFRSYM    DATA     BYTE      DAC0CF1
       000000B9H   SFRSYM    DATA     BYTE      ADC0CF1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 26
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 26
 
 
       000000C8H.1 SFRSYM    DATA     BIT       TMR2CN0_T2XCLK1
@@ -1689,7 +1689,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000008CH   SFRSYM    DATA     BYTE      DAC2H
       0000008EH   SFRSYM    DATA     BYTE      DAC3H
       00000088H.6 SFRSYM    DATA     BIT       DACGCF0_D3AMEN
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 27
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 27
 
 
       000000CAH   SFRSYM    DATA     WORD      TMR2RL
@@ -1754,7 +1754,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000080H.2 SFRSYM    DATA     BIT       P0_B2
       000000BFH   SFRSYM    DATA     BYTE      CMP1CN0
       00000099H   SFRSYM    DATA     BYTE      CMP0CN1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 28
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 28
 
 
       00000088H.3 SFRSYM    DATA     BIT       TCON_IE1
@@ -1819,7 +1819,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000088H   SFRSYM    DATA     BIT       TCON_IT0
       000000C8H.1 SFRSYM    DATA     BIT       SCON1_TI
       000000EFH   SFRSYM    DATA     BYTE      RSTSRC
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 29
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 29
 
 
       000000FDH   SFRSYM    DATA     BYTE      P0MAT
@@ -1884,7 +1884,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000009DH   SFRSYM    DATA     BYTE      UART1FCN0
       000000DFH   SFRSYM    DATA     BYTE      SPI0PCF
       000000A3H   SFRSYM    DATA     BYTE      SPI0DAT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 30
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 30
 
 
       000000ADH   SFRSYM    DATA     BYTE      I2C0FCN0
@@ -1903,20 +1903,20 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C0H.5 SFRSYM    DATA     BIT       TMR5CN0_TF5LEN
       000000E8H.6 SFRSYM    DATA     BIT       CLIF0_C3FIF
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
-      01001618H   SYMBOL    CONST    ---       thinfont_bits
+      01001615H   SYMBOL    CONST    ---       thinfont_bits
 
-      01000CDCH   BLOCK     CODE     ---       LVL=0
+      01000CC4H   BLOCK     CODE     ---       LVL=0
       00000065H   SYMBOL    DATA     ---       str
-      01000CE2H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000CCAH   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      len
       ---         BLOCKEND  ---      ---       LVL=1
-      01000CDCH   LINE      CODE     ---       #50
-      01000CE2H   LINE      CODE     ---       #52
-      01000CE2H   LINE      CODE     ---       #53
-      01000CE4H   LINE      CODE     ---       #55
-      01000CF7H   LINE      CODE     ---       #56
-      01000CF8H   LINE      CODE     ---       #58
-      01000D00H   LINE      CODE     ---       #59
+      01000CC4H   LINE      CODE     ---       #50
+      01000CCAH   LINE      CODE     ---       #52
+      01000CCAH   LINE      CODE     ---       #53
+      01000CCCH   LINE      CODE     ---       #55
+      01000CDFH   LINE      CODE     ---       #56
+      01000CE0H   LINE      CODE     ---       #58
+      01000CE8H   LINE      CODE     ---       #59
       ---         BLOCKEND  ---      ---       LVL=0
       00000007H   SYMBOL    DATA     ---       line
       00000006H   SYMBOL    DATA     BYTE      i
@@ -1928,42 +1928,42 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000004H   SYMBOL    DATA     BYTE      x
       00000007H   SYMBOL    DATA     BYTE      swap
 
-      0100089AH   BLOCK     CODE     ---       LVL=0
+      0100083DH   BLOCK     CODE     ---       LVL=0
       00000065H   SYMBOL    DATA     ---       line
       00000066H   SYMBOL    DATA     BYTE      posx
       00000067H   SYMBOL    DATA     BYTE      posy
       00000068H   SYMBOL    DATA     ---       str
-      010008A0H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000843H   BLOCK     CODE     NEAR LAB  LVL=1
       0000006BH   SYMBOL    DATA     CHAR      c
       00000001H   SYMBOL    DATA     BYTE      font_byte
       00000005H   SYMBOL    DATA     ---       line16
       ---         BLOCKEND  ---      ---       LVL=1
-      0100089AH   LINE      CODE     ---       #179
-      010008A0H   LINE      CODE     ---       #184
-      010008A0H   LINE      CODE     ---       #194
-      010008AEH   LINE      CODE     ---       #195
-      010008AEH   LINE      CODE     ---       #196
-      010008B0H   LINE      CODE     ---       #199
-      010008C0H   LINE      CODE     ---       #200
-      010008C0H   LINE      CODE     ---       #201
-      010008C3H   LINE      CODE     ---       #202
-      010008C3H   LINE      CODE     ---       #205
-      010008CAH   LINE      CODE     ---       #206
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 31
+      0100083DH   LINE      CODE     ---       #179
+      01000843H   LINE      CODE     ---       #184
+      01000843H   LINE      CODE     ---       #194
+      01000851H   LINE      CODE     ---       #195
+      01000851H   LINE      CODE     ---       #196
+      01000853H   LINE      CODE     ---       #199
+      01000863H   LINE      CODE     ---       #200
+      01000863H   LINE      CODE     ---       #201
+      01000866H   LINE      CODE     ---       #202
+      01000866H   LINE      CODE     ---       #205
+      0100086DH   LINE      CODE     ---       #206
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 31
 
 
-      010008CAH   LINE      CODE     ---       #207
-      010008CAH   LINE      CODE     ---       #208
-      010008CAH   LINE      CODE     ---       #209
-      010008CCH   LINE      CODE     ---       #210
-      010008CCH   LINE      CODE     ---       #212
-      010008F0H   LINE      CODE     ---       #215
-      010008FAH   LINE      CODE     ---       #231
-      01000924H   LINE      CODE     ---       #232
-      01000948H   LINE      CODE     ---       #235
-      01000953H   LINE      CODE     ---       #236
-      01000959H   LINE      CODE     ---       #237
-      0100095CH   LINE      CODE     ---       #238
+      0100086DH   LINE      CODE     ---       #207
+      0100086DH   LINE      CODE     ---       #208
+      0100086DH   LINE      CODE     ---       #209
+      0100086FH   LINE      CODE     ---       #210
+      0100086FH   LINE      CODE     ---       #212
+      01000893H   LINE      CODE     ---       #215
+      0100089DH   LINE      CODE     ---       #231
+      010008C7H   LINE      CODE     ---       #232
+      010008EBH   LINE      CODE     ---       #235
+      010008F6H   LINE      CODE     ---       #236
+      010008FCH   LINE      CODE     ---       #237
+      010008FFH   LINE      CODE     ---       #238
       ---         BLOCKEND  ---      ---       LVL=0
       00000007H   SYMBOL    DATA     ---       line
       00000005H   SYMBOL    DATA     BYTE      posx
@@ -1975,9 +1975,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000005H   SYMBOL    DATA     BYTE      i
 
       ---         MODULE    ---      ---       SPI
-      01000AE9H   PUBLIC    CODE     ---       TIMER2_ISR
-      01000D92H   PUBLIC    CODE     ---       SPI0_transferCompleteCb
-      01000C75H   PUBLIC    CODE     ---       _SPI_StartTransfer
+      01000AF7H   PUBLIC    CODE     ---       TIMER2_ISR
+      01000D9FH   PUBLIC    CODE     ---       SPI0_transferCompleteCb
+      01000C83H   PUBLIC    CODE     ---       _SPI_StartTransfer
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -2014,7 +2014,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000009CH   SFRSYM    DATA     BYTE      P3MDOUT
       000000A3H   SFRSYM    DATA     BYTE      TMR4RLH
       000000BBH   SFRSYM    DATA     BYTE      EIP1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 32
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 32
 
 
       000000D3H   SFRSYM    DATA     BYTE      TMR5RLH
@@ -2079,7 +2079,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B1H   SFRSYM    DATA     BYTE      CLU0CF
       000000BBH   SFRSYM    DATA     BYTE      ADC0MX
       000000E0H   SFRSYM    DATA     BIT       ACC_ACC0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 33
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 33
 
 
       000000D1H   SFRSYM    DATA     BYTE      REF0CN
@@ -2144,7 +2144,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000009EH   SFRSYM    DATA     BYTE      PCA0CENT
       000000BAH   SFRSYM    DATA     BYTE      I2C0CN0
       000000D2H   SFRSYM    DATA     BYTE      CRC0ST
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 34
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 34
 
 
       000000F8H.4 SFRSYM    DATA     BIT       SPI0CN0_RXOVRN
@@ -2209,7 +2209,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B5H   SFRSYM    DATA     BYTE      DEVICEID
       000000A9H   SFRSYM    DATA     BYTE      CLKSEL
       000000F8H   SFRSYM    DATA     BIT       SPI0CN0_SPIEN
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 35
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 35
 
 
       00000085H   SFRSYM    DATA     BYTE      DAC0H
@@ -2274,7 +2274,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000090H   SFRSYM    DATA     BIT       P1_B0
       00000080H.1 SFRSYM    DATA     BIT       P0_B1
       000000B8H.2 SFRSYM    DATA     BIT       IP_PX1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 36
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 36
 
 
       00000088H.7 SFRSYM    DATA     BIT       DACGCF0_D23REFSL
@@ -2339,7 +2339,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000087H   SFRSYM    DATA     BYTE      PCON0
       000000F2H   SFRSYM    DATA     BYTE      IPH
       000000C3H   SFRSYM    DATA     BYTE      ADC0GTL
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 37
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 37
 
 
       00000098H.7 SFRSYM    DATA     BIT       TMR4CN0_TF4H
@@ -2404,7 +2404,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C0H.4 SFRSYM    DATA     BIT       TMR5CN0_TF5CEN
       000000F8H.7 SFRSYM    DATA     BIT       SPI0CN0_SPIF
       00000094H   SFRSYM    DATA     BYTE      TMR3L
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 38
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 38
 
 
       000000A8H.7 SFRSYM    DATA     BIT       IE_EA
@@ -2437,69 +2437,68 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000001CH   SYMBOL    DATA     BYTE      TransferState
       0000001DH   SYMBOL    DATA     BYTE      TransferSize
 
-      01000C75H   BLOCK     CODE     ---       LVL=0
+      01000C83H   BLOCK     CODE     ---       LVL=0
       0000007DH   SYMBOL    DATA     ---       buffer
       00000005H   SYMBOL    DATA     BYTE      size
-      01000C7BH   BLOCK     CODE     NEAR LAB  LVL=1
+      01000C89H   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      sfrPageSave
       00000007H   SYMBOL    DATA     BYTE      i
       ---         BLOCKEND  ---      ---       LVL=1
-      01000C75H   LINE      CODE     ---       #38
-      01000C7BH   LINE      CODE     ---       #39
-      01000C7BH   LINE      CODE     ---       #44
-      01000C7FH   LINE      CODE     ---       #47
-      01000C82H   LINE      CODE     ---       #48
-      01000C84H   LINE      CODE     ---       #50
-      01000C8BH   LINE      CODE     ---       #51
-      01000C8BH   LINE      CODE     ---       #52
-      01000CA0H   LINE      CODE     ---       #53
-      01000CA3H   LINE      CODE     ---       #55
-      01000CA5H   LINE      CODE     ---       #56
-      01000CA8H   LINE      CODE     ---       #60
-      01000CAEH   LINE      CODE     ---       #61
-      01000CB0H   LINE      CODE     ---       #62
-      01000CB3H   LINE      CODE     ---       #64
-      01000CB5H   LINE      CODE     ---       #65
+      01000C83H   LINE      CODE     ---       #38
+      01000C89H   LINE      CODE     ---       #39
+      01000C89H   LINE      CODE     ---       #44
+      01000C8DH   LINE      CODE     ---       #47
+      01000C90H   LINE      CODE     ---       #48
+      01000C92H   LINE      CODE     ---       #50
+      01000C99H   LINE      CODE     ---       #51
+      01000C99H   LINE      CODE     ---       #52
+      01000CAEH   LINE      CODE     ---       #53
+      01000CB1H   LINE      CODE     ---       #55
+      01000CB3H   LINE      CODE     ---       #56
+      01000CB6H   LINE      CODE     ---       #60
+      01000CBCH   LINE      CODE     ---       #61
+      01000CBEH   LINE      CODE     ---       #62
+      01000CC1H   LINE      CODE     ---       #64
+      01000CC3H   LINE      CODE     ---       #65
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D92H   BLOCK     CODE     ---       LVL=0
-      01000D92H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000D9FH   BLOCK     CODE     ---       LVL=0
+      01000D9FH   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      sfrPageSave
       ---         BLOCKEND  ---      ---       LVL=1
-      01000D92H   LINE      CODE     ---       #71
-      01000D92H   LINE      CODE     ---       #72
-      01000D92H   LINE      CODE     ---       #76
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 39
+      01000D9FH   LINE      CODE     ---       #71
+      01000D9FH   LINE      CODE     ---       #72
+      01000D9FH   LINE      CODE     ---       #76
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 39
 
 
-      01000D95H   LINE      CODE     ---       #78
-      01000D97H   LINE      CODE     ---       #79
-      01000D9AH   LINE      CODE     ---       #83
-      01000DA0H   LINE      CODE     ---       #84
-      01000DA3H   LINE      CODE     ---       #86
-      01000DA5H   LINE      CODE     ---       #87
+      01000DA2H   LINE      CODE     ---       #78
+      01000DA4H   LINE      CODE     ---       #79
+      01000DA7H   LINE      CODE     ---       #83
+      01000DADH   LINE      CODE     ---       #84
+      01000DB0H   LINE      CODE     ---       #86
+      01000DB2H   LINE      CODE     ---       #87
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000AE9H   BLOCK     CODE     ---       LVL=0
-      01000AE9H   LINE      CODE     ---       #98
-      01000B06H   LINE      CODE     ---       #100
-      01000B09H   LINE      CODE     ---       #103
-      01000B0CH   LINE      CODE     ---       #106
-      01000B11H   LINE      CODE     ---       #107
-      01000B11H   LINE      CODE     ---       #108
-      01000B14H   LINE      CODE     ---       #109
-      01000B21H   LINE      CODE     ---       #110
-      01000B23H   LINE      CODE     ---       #112
-      01000B28H   LINE      CODE     ---       #113
-      01000B28H   LINE      CODE     ---       #115
-      01000B2AH   LINE      CODE     ---       #118
-      01000B2DH   LINE      CODE     ---       #119
-      01000B2DH   LINE      CODE     ---       #120
+      01000AF7H   BLOCK     CODE     ---       LVL=0
+      01000AF7H   LINE      CODE     ---       #98
+      01000B14H   LINE      CODE     ---       #100
+      01000B17H   LINE      CODE     ---       #103
+      01000B1AH   LINE      CODE     ---       #106
+      01000B1FH   LINE      CODE     ---       #107
+      01000B1FH   LINE      CODE     ---       #108
+      01000B22H   LINE      CODE     ---       #109
+      01000B2FH   LINE      CODE     ---       #110
+      01000B31H   LINE      CODE     ---       #112
+      01000B36H   LINE      CODE     ---       #113
+      01000B36H   LINE      CODE     ---       #115
+      01000B38H   LINE      CODE     ---       #118
+      01000B3BH   LINE      CODE     ---       #119
+      01000B3BH   LINE      CODE     ---       #120
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       TICK
-      01000DC9H   PUBLIC    CODE     ---       TIMER3_ISR
-      01000D7CH   PUBLIC    CODE     ---       GetTickCount
+      01000D89H   PUBLIC    CODE     ---       GetTickCount
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -2534,10 +2533,10 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000A8H   SFRSYM    DATA     BYTE      IE
       00000093H   SFRSYM    DATA     BYTE      TMR3RLH
       0000009CH   SFRSYM    DATA     BYTE      P3MDOUT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 40
-
-
       000000A3H   SFRSYM    DATA     BYTE      TMR4RLH
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 40
+
+
       000000BBH   SFRSYM    DATA     BYTE      EIP1
       000000D3H   SFRSYM    DATA     BYTE      TMR5RLH
       000000EDH   SFRSYM    DATA     BYTE      EIP2
@@ -2599,10 +2598,10 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C0H.5 SFRSYM    DATA     BIT       SMB0CN0_STA
       000000E3H   SFRSYM    DATA     BYTE      XBR2
       000000B1H   SFRSYM    DATA     BYTE      CLU0CF
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 41
-
-
       000000BBH   SFRSYM    DATA     BYTE      ADC0MX
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 41
+
+
       000000E0H   SFRSYM    DATA     BIT       ACC_ACC0
       000000D1H   SFRSYM    DATA     BYTE      REF0CN
       000000B3H   SFRSYM    DATA     BYTE      CLU1CF
@@ -2664,10 +2663,10 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000D0H.3 SFRSYM    DATA     BIT       PSW_RS0
       000000D8H.7 SFRSYM    DATA     BIT       PCA0CN0_CF
       0000009EH   SFRSYM    DATA     BYTE      PCA0CENT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 42
-
-
       000000BAH   SFRSYM    DATA     BYTE      I2C0CN0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 42
+
+
       000000D2H   SFRSYM    DATA     BYTE      CRC0ST
       000000F8H.4 SFRSYM    DATA     BIT       SPI0CN0_RXOVRN
       000000D0H.4 SFRSYM    DATA     BIT       PSW_RS1
@@ -2729,10 +2728,10 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000A0H.2 SFRSYM    DATA     BIT       BSP_BC_EN
       00000098H.7 SFRSYM    DATA     BIT       SCON0_SMODE
       000000B5H   SFRSYM    DATA     BYTE      DEVICEID
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 43
-
-
       000000A9H   SFRSYM    DATA     BYTE      CLKSEL
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 43
+
+
       000000F8H   SFRSYM    DATA     BIT       SPI0CN0_SPIEN
       00000085H   SFRSYM    DATA     BYTE      DAC0H
       000000F0H   SFRSYM    DATA     BYTE      B
@@ -2794,10 +2793,10 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000080H   SFRSYM    DATA     BIT       P0_B0
       000000B8H   SFRSYM    DATA     BIT       IP_PX0
       00000090H   SFRSYM    DATA     BIT       P1_B0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 44
-
-
       00000080H.1 SFRSYM    DATA     BIT       P0_B1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 44
+
+
       000000B8H.2 SFRSYM    DATA     BIT       IP_PX1
       00000088H.7 SFRSYM    DATA     BIT       DACGCF0_D23REFSL
       0000009EH   SFRSYM    DATA     BYTE      UART1LIN
@@ -2859,10 +2858,10 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C8H   SFRSYM    DATA     BIT       SCON1_RI
       00000099H   SFRSYM    DATA     BYTE      SBUF0
       00000087H   SFRSYM    DATA     BYTE      PCON0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 45
-
-
       000000F2H   SFRSYM    DATA     BYTE      IPH
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 45
+
+
       000000C3H   SFRSYM    DATA     BYTE      ADC0GTL
       00000098H.7 SFRSYM    DATA     BIT       TMR4CN0_TF4H
       00000098H.3 SFRSYM    DATA     BIT       TMR4CN0_T4SPLIT
@@ -2924,10 +2923,10 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000096H   SFRSYM    DATA     BYTE      PCA0POL
       000000CEH   SFRSYM    DATA     BYTE      TMR2L
       000000C0H.4 SFRSYM    DATA     BIT       TMR5CN0_TF5CEN
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 46
-
-
       000000F8H.7 SFRSYM    DATA     BIT       SPI0CN0_SPIF
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 46
+
+
       00000094H   SFRSYM    DATA     BYTE      TMR3L
       000000A8H.7 SFRSYM    DATA     BIT       IE_EA
       000000A4H   SFRSYM    DATA     BYTE      TMR4L
@@ -2957,31 +2956,24 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
       0000001EH   SYMBOL    DATA     WORD      Ticks
 
-      01000D7CH   BLOCK     CODE     ---       LVL=0
-      01000D7CH   BLOCK     CODE     NEAR LAB  LVL=1
+      01000D89H   BLOCK     CODE     ---       LVL=0
+      01000D89H   BLOCK     CODE     NEAR LAB  LVL=1
       00000004H   SYMBOL    DATA     WORD      ticks
       00000007H   SYMBOL    DATA     BYTE      save_page
       ---         BLOCKEND  ---      ---       LVL=1
-      01000D7CH   LINE      CODE     ---       #35
-      01000D7CH   LINE      CODE     ---       #36
-      01000D7CH   LINE      CODE     ---       #38
-      01000D7EH   LINE      CODE     ---       #41
-      01000D81H   LINE      CODE     ---       #42
-      01000D84H   LINE      CODE     ---       #44
-      01000D88H   LINE      CODE     ---       #47
-      01000D8BH   LINE      CODE     ---       #48
-      01000D8DH   LINE      CODE     ---       #50
-      01000D91H   LINE      CODE     ---       #51
+      01000D89H   LINE      CODE     ---       #35
+      01000D89H   LINE      CODE     ---       #36
+      01000D89H   LINE      CODE     ---       #38
+      01000D8BH   LINE      CODE     ---       #41
+      01000D8EH   LINE      CODE     ---       #42
+      01000D91H   LINE      CODE     ---       #44
+      01000D95H   LINE      CODE     ---       #47
+      01000D98H   LINE      CODE     ---       #48
+      01000D9AH   LINE      CODE     ---       #50
+      01000D9EH   LINE      CODE     ---       #51
       ---         BLOCKEND  ---      ---       LVL=0
       00000002H   SYMBOL    DATA     WORD      ms
       00000082H   SYMBOL    DATA     WORD      ticks
-
-      01000DC9H   BLOCK     CODE     ---       LVL=0
-      01000DC9H   LINE      CODE     ---       #79
-      01000DCBH   LINE      CODE     ---       #82
-      01000DCEH   LINE      CODE     ---       #84
-      01000DD6H   LINE      CODE     ---       #85
-      ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       PWR
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
@@ -2989,9 +2981,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
       000000D0H.2 SFRSYM    DATA     BIT       PSW_OV
       00000086H   SFRSYM    DATA     BYTE      XOSC0CN
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 47
-
-
       00000090H   SFRSYM    DATA     BYTE      P1
       000000F8H.1 SFRSYM    DATA     BIT       SPI0CN0_TXNF
       00000097H   SFRSYM    DATA     BYTE      WDTCN
@@ -3000,6 +2989,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C0H.7 SFRSYM    DATA     BIT       SMB0CN0_MASTER
       000000F9H   SFRSYM    DATA     WORD      PCA0
       000000E6H   SFRSYM    DATA     BYTE      EIE1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 47
+
+
       000000C0H.1 SFRSYM    DATA     BIT       SMB0CN0_ACK
       000000E8H.1 SFRSYM    DATA     BIT       CLIF0_C0RIF
       000000F3H   SFRSYM    DATA     BYTE      EIE2
@@ -3054,9 +3046,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000EBH   SFRSYM    DATA     BYTE      PCA0CPL2
       000000A1H   SFRSYM    DATA     BYTE      ADC0ASCF
       000000B6H   SFRSYM    DATA     BYTE      ADC0ASAH
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 48
-
-
       000000F0H.5 SFRSYM    DATA     BIT       B_B5
       000000E8H.6 SFRSYM    DATA     BIT       ADC0CN0_IPOEN
       000000E8H   SFRSYM    DATA     BIT       ADC0CN0_TEMPE
@@ -3065,6 +3054,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B8H   SFRSYM    DATA     BYTE      IP
       000000F0H.6 SFRSYM    DATA     BIT       B_B6
       000000C5H   SFRSYM    DATA     WORD      ADC0LT
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 48
+
+
       000000AEH   SFRSYM    DATA     BYTE      PCA0CPM3
       00000084H   SFRSYM    DATA     BYTE      PCA0CPL4
       000000D8H.6 SFRSYM    DATA     BIT       UART1FCN1_TXNF
@@ -3119,9 +3111,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000D8H.3 SFRSYM    DATA     BIT       PCA0CN0_CCF3
       000000A4H   SFRSYM    DATA     WORD      TMR4
       00000094H   SFRSYM    DATA     BYTE      SBCON1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 49
-
-
       000000D8H.4 SFRSYM    DATA     BIT       PCA0CN0_CCF4
       000000D4H   SFRSYM    DATA     WORD      TMR5
       000000C0H.3 SFRSYM    DATA     BIT       SMB0CN0_ACKRQ
@@ -3130,6 +3119,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000F1H   SFRSYM    DATA     BYTE      P0MDIN
       000000AFH   SFRSYM    DATA     BYTE      CLU0FN
       00000098H.4 SFRSYM    DATA     BIT       SCON0_REN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 49
+
+
       000000ACH   SFRSYM    DATA     BYTE      SMB0TC
       000000F2H   SFRSYM    DATA     BYTE      P1MDIN
       000000B2H   SFRSYM    DATA     BYTE      CLU1FN
@@ -3184,9 +3176,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000D4H   SFRSYM    DATA     BYTE      P0SKIP
       000000D1H   SFRSYM    DATA     BYTE      CLOUT0
       000000D8H   SFRSYM    DATA     BIT       UART1FCN1_RIE
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 50
-
-
       000000C0H   SFRSYM    DATA     BIT       TMR5CN0_T5XCLK0
       000000A8H.5 SFRSYM    DATA     BIT       IE_ET2
       00000088H   SFRSYM    DATA     BIT       DACGCF0_D1SRC0
@@ -3195,6 +3184,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000088H.1 SFRSYM    DATA     BIT       DACGCF0_D1SRC1
       000000CCH   SFRSYM    DATA     BYTE      P2SKIP
       00000084H   SFRSYM    DATA     BYTE      CLU0MX
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 50
+
+
       000000E8H   SFRSYM    DATA     BYTE      ADC0CN0
       000000D8H.4 SFRSYM    DATA     BIT       UART1FCN1_TIE
       000000A8H   SFRSYM    DATA     BIT       IE_EX0
@@ -3249,9 +3241,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B8H.4 SFRSYM    DATA     BIT       IP_PS0
       00000084H   SFRSYM    DATA     WORD      PCA0CP4
       000000FAH   SFRSYM    DATA     BYTE      UART1FCT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 51
-
-
       0000008DH   SFRSYM    DATA     BYTE      TH1
       000000FAH   SFRSYM    DATA     BYTE      PCA0H
       000000F5H   SFRSYM    DATA     BYTE      I2C0FCT
@@ -3260,6 +3249,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C7H   SFRSYM    DATA     BYTE      CLIE0
       000000B8H.3 SFRSYM    DATA     BIT       IP_PT1
       00000088H.3 SFRSYM    DATA     BIT       DACGCF0_D01REFSL
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 51
+
+
       000000B5H   SFRSYM    DATA     WORD      ADC0ASA
       000000E8H   SFRSYM    DATA     BYTE      CLIF0
       000000C0H.2 SFRSYM    DATA     BIT       SMB0CN0_ARBLOST
@@ -3314,9 +3306,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000A0H.5 SFRSYM    DATA     BIT       P2_B5
       00000090H.6 SFRSYM    DATA     BIT       P1_B6
       00000080H.7 SFRSYM    DATA     BIT       P0_B7
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 52
-
-
       00000098H.2 SFRSYM    DATA     BIT       DACGCF1_D2UDIS
       000000C5H   SFRSYM    DATA     BYTE      SMB0RXLN
       000000F6H   SFRSYM    DATA     BYTE      EIP2H
@@ -3325,6 +3314,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000098H.3 SFRSYM    DATA     BIT       DACGCF1_D3UDIS
       000000B0H.7 SFRSYM    DATA     BIT       P3_B7
       00000083H   SFRSYM    DATA     BYTE      DPH
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 52
+
+
       000000C4H   SFRSYM    DATA     BYTE      ADC0GTH
       000000C8H.7 SFRSYM    DATA     BIT       TMR2CN0_TF2H
       000000C8H.3 SFRSYM    DATA     BIT       TMR2CN0_T2SPLIT
@@ -3379,9 +3371,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000FDH   SFRSYM    DATA     BYTE      TMR2CN1
       00000098H   SFRSYM    DATA     BYTE      TMR4CN0
       000000FEH   SFRSYM    DATA     BYTE      TMR3CN1
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 53
-
-
       000000C0H   SFRSYM    DATA     BYTE      TMR5CN0
       000000FFH   SFRSYM    DATA     BYTE      TMR4CN1
       000000D7H   SFRSYM    DATA     BYTE      SMB0ADR
@@ -3390,6 +3379,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C8H.4 SFRSYM    DATA     BIT       TMR2CN0_TF2CEN
       00000088H.6 SFRSYM    DATA     BIT       TCON_TR1
       000000C2H   SFRSYM    DATA     BYTE      SMB0DAT
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 53
+
+
       000000CFH   SFRSYM    DATA     BYTE      TMR2H
       000000A1H   SFRSYM    DATA     BYTE      SPI0CFG
       00000095H   SFRSYM    DATA     BYTE      TMR3H
@@ -3442,12 +3434,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000007H   SYMBOL    DATA     BYTE      save_sfrpage
 
       ---         MODULE    ---      ---       SPI_0
-      0100095DH   PUBLIC    CODE     ---       SPI0_ISR
+      01000900H   PUBLIC    CODE     ---       SPI0_ISR
       00000022H   PUBLIC    DATA     BYTE      ?_SPI0_transfer?BYTE
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 54
-
-
-      01000BA0H   PUBLIC    CODE     ---       _SPI0_transfer
+      01000BAEH   PUBLIC    CODE     ---       _SPI0_transfer
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -3455,6 +3444,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000086H   SFRSYM    DATA     BYTE      XOSC0CN
       00000090H   SFRSYM    DATA     BYTE      P1
       000000F8H.1 SFRSYM    DATA     BIT       SPI0CN0_TXNF
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 54
+
+
       00000097H   SFRSYM    DATA     BYTE      WDTCN
       000000A0H   SFRSYM    DATA     BYTE      P2
       000000B0H   SFRSYM    DATA     BYTE      P3
@@ -3509,9 +3501,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000DAH   SFRSYM    DATA     BYTE      PCA0CPM0
       000000E9H   SFRSYM    DATA     BYTE      PCA0CPL1
       000000DEH   SFRSYM    DATA     BYTE      PCA0CPH5
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 55
-
-
       000000D8H.7 SFRSYM    DATA     BIT       UART1FCN1_TFRQ
       000000F0H.4 SFRSYM    DATA     BIT       B_B4
       000000DBH   SFRSYM    DATA     BYTE      PCA0CPM1
@@ -3520,6 +3509,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B6H   SFRSYM    DATA     BYTE      ADC0ASAH
       000000F0H.5 SFRSYM    DATA     BIT       B_B5
       000000E8H.6 SFRSYM    DATA     BIT       ADC0CN0_IPOEN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 55
+
+
       000000E8H   SFRSYM    DATA     BIT       ADC0CN0_TEMPE
       000000DCH   SFRSYM    DATA     BYTE      PCA0CPM2
       000000F4H   SFRSYM    DATA     BYTE      PCA0CPL3
@@ -3574,9 +3566,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C7H   SFRSYM    DATA     BYTE      ADC0ASCT
       000000D8H.2 SFRSYM    DATA     BIT       PCA0CN0_CCF2
       000000E0H.7 SFRSYM    DATA     BIT       ACC_ACC7
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 56
-
-
       00000094H   SFRSYM    DATA     WORD      TMR3
       0000009BH   SFRSYM    DATA     BYTE      SPI0FCN1
       000000C0H.2 SFRSYM    DATA     BIT       TMR5CN0_TR5
@@ -3585,6 +3574,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000094H   SFRSYM    DATA     BYTE      SBCON1
       000000D8H.4 SFRSYM    DATA     BIT       PCA0CN0_CCF4
       000000D4H   SFRSYM    DATA     WORD      TMR5
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 56
+
+
       000000C0H.3 SFRSYM    DATA     BIT       SMB0CN0_ACKRQ
       000000D8H.5 SFRSYM    DATA     BIT       PCA0CN0_CCF5
       000000FFH   SFRSYM    DATA     BYTE      VDM0CN
@@ -3639,9 +3631,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000009FH   SFRSYM    DATA     BYTE      CMP0MX
       00000098H   SFRSYM    DATA     BIT       TMR4CN0_T4XCLK0
       000000A8H.1 SFRSYM    DATA     BIT       IE_ET0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 57
-
-
       000000AAH   SFRSYM    DATA     BYTE      CMP1MX
       00000098H.1 SFRSYM    DATA     BIT       TMR4CN0_T4XCLK1
       000000A8H.3 SFRSYM    DATA     BIT       IE_ET1
@@ -3650,6 +3639,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000D8H   SFRSYM    DATA     BIT       UART1FCN1_RIE
       000000C0H   SFRSYM    DATA     BIT       TMR5CN0_T5XCLK0
       000000A8H.5 SFRSYM    DATA     BIT       IE_ET2
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 57
+
+
       00000088H   SFRSYM    DATA     BIT       DACGCF0_D1SRC0
       000000D5H   SFRSYM    DATA     BYTE      P1SKIP
       000000C0H.1 SFRSYM    DATA     BIT       TMR5CN0_T5XCLK1
@@ -3704,9 +3696,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000098H   SFRSYM    DATA     BYTE      DACGCF1
       000000CEH   SFRSYM    DATA     BYTE      CRC0CN0
       000000F4H   SFRSYM    DATA     WORD      PCA0CP3
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 58
-
-
       0000008CH   SFRSYM    DATA     BYTE      TH0
       000000A2H   SFRSYM    DATA     BYTE      DACGCF2
       00000086H   SFRSYM    DATA     BYTE      CRC0CN1
@@ -3715,6 +3704,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000FAH   SFRSYM    DATA     BYTE      UART1FCT
       0000008DH   SFRSYM    DATA     BYTE      TH1
       000000FAH   SFRSYM    DATA     BYTE      PCA0H
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 58
+
+
       000000F5H   SFRSYM    DATA     BYTE      I2C0FCT
       000000B8H.1 SFRSYM    DATA     BIT       IP_PT0
       000000DDH   SFRSYM    DATA     WORD      PCA0CP5
@@ -3769,9 +3761,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000090H.5 SFRSYM    DATA     BIT       P1_B5
       00000080H.6 SFRSYM    DATA     BIT       P0_B6
       00000098H.1 SFRSYM    DATA     BIT       DACGCF1_D1UDIS
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 59
-
-
       000000EEH   SFRSYM    DATA     BYTE      EIP1H
       000000D8H.2 SFRSYM    DATA     BIT       UART1FCN1_RXTO1
       000000B0H.4 SFRSYM    DATA     BIT       P3_B4
@@ -3780,6 +3769,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000080H.7 SFRSYM    DATA     BIT       P0_B7
       00000098H.2 SFRSYM    DATA     BIT       DACGCF1_D2UDIS
       000000C5H   SFRSYM    DATA     BYTE      SMB0RXLN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 59
+
+
       000000F6H   SFRSYM    DATA     BYTE      EIP2H
       000000A0H.6 SFRSYM    DATA     BIT       P2_B6
       00000090H.7 SFRSYM    DATA     BIT       P1_B7
@@ -3834,9 +3826,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000E8H.1 SFRSYM    DATA     BIT       ADC0CN0_ADGN0
       0000009CH   SFRSYM    DATA     BYTE      PCA0CLR
       000000C0H.6 SFRSYM    DATA     BIT       TMR5CN0_TF5L
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 60
-
-
       000000E8H.2 SFRSYM    DATA     BIT       ADC0CN0_ADGN1
       000000C8H   SFRSYM    DATA     BYTE      TMR2CN0
       00000091H   SFRSYM    DATA     BYTE      TMR3CN0
@@ -3845,6 +3834,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000FEH   SFRSYM    DATA     BYTE      TMR3CN1
       000000C0H   SFRSYM    DATA     BYTE      TMR5CN0
       000000FFH   SFRSYM    DATA     BYTE      TMR4CN1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 60
+
+
       000000D7H   SFRSYM    DATA     BYTE      SMB0ADR
       00000088H.4 SFRSYM    DATA     BIT       TCON_TR0
       000000F1H   SFRSYM    DATA     BYTE      TMR5CN1
@@ -3899,20 +3891,20 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000016H   SYMBOL    DATA     BYTE      bytesRemaining
       00000021H.4 SYMBOL    BIT      BIT       modeIsMaster
       00000017H   SYMBOL    DATA     ---       pRxBuf
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 61
-
-
       00000019H   SYMBOL    DATA     ---       pTxBuf
       00000021H.5 SYMBOL    BIT      BIT       initIsValid
-      01000DB8H   SYMBOL    CODE     ---       SPI0_internalInit
+      01000DC5H   SYMBOL    CODE     ---       SPI0_internalInit
 
-      01000DB8H   BLOCK     CODE     ---       LVL=0
-      01000DB8H   LINE      CODE     ---       #50
-      01000DB8H   LINE      CODE     ---       #51
-      01000DB8H   LINE      CODE     ---       #53
-      01000DBEH   LINE      CODE     ---       #54
-      01000DC6H   LINE      CODE     ---       #57
-      01000DC8H   LINE      CODE     ---       #58
+      01000DC5H   BLOCK     CODE     ---       LVL=0
+      01000DC5H   LINE      CODE     ---       #50
+      01000DC5H   LINE      CODE     ---       #51
+      01000DC5H   LINE      CODE     ---       #53
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 61
+
+
+      01000DCBH   LINE      CODE     ---       #54
+      01000DD3H   LINE      CODE     ---       #57
+      01000DD5H   LINE      CODE     ---       #58
       ---         BLOCKEND  ---      ---       LVL=0
       00000006H   SYMBOL    DATA     BYTE      ret
       00000007H   SYMBOL    DATA     BYTE      savedPage
@@ -3953,127 +3945,127 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000004H   SYMBOL    DATA     BYTE      fifoCtrl
       00000006H   SYMBOL    DATA     BYTE      savedPage
 
-      01000BA0H   BLOCK     CODE     ---       LVL=0
+      01000BAEH   BLOCK     CODE     ---       LVL=0
       00000007H   SYMBOL    DATA     ---       pTxBuffer
       00000004H   SYMBOL    DATA     ---       pRxBuffer
       00000003H   SYMBOL    DATA     BYTE      dir
       00000026H   SYMBOL    DATA     BYTE      xferCount
-      01000BA0H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000BAEH   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      savedPage
       ---         BLOCKEND  ---      ---       LVL=1
-      01000BA0H   LINE      CODE     ---       #591
-      01000BA0H   LINE      CODE     ---       #597
-      01000BA0H   LINE      CODE     ---       #600
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 62
+      01000BAEH   LINE      CODE     ---       #591
+      01000BAEH   LINE      CODE     ---       #597
+      01000BAEH   LINE      CODE     ---       #600
+      01000BB1H   LINE      CODE     ---       #601
+      01000BB4H   LINE      CODE     ---       #602
+      01000BB7H   LINE      CODE     ---       #603
+      01000BB9H   LINE      CODE     ---       #604
+      01000BBDH   LINE      CODE     ---       #605
+      01000BC1H   LINE      CODE     ---       #606
+      01000BC6H   LINE      CODE     ---       #608
+      01000BCBH   LINE      CODE     ---       #611
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 62
 
 
-      01000BA3H   LINE      CODE     ---       #601
-      01000BA6H   LINE      CODE     ---       #602
-      01000BA9H   LINE      CODE     ---       #603
-      01000BABH   LINE      CODE     ---       #604
-      01000BAFH   LINE      CODE     ---       #605
-      01000BB3H   LINE      CODE     ---       #606
-      01000BB8H   LINE      CODE     ---       #608
-      01000BBDH   LINE      CODE     ---       #611
-      01000BC0H   LINE      CODE     ---       #612
-      01000BC0H   LINE      CODE     ---       #613
-      01000BC3H   LINE      CODE     ---       #614
-      01000BC3H   LINE      CODE     ---       #618
-      01000BC3H   LINE      CODE     ---       #620
-      01000BC6H   LINE      CODE     ---       #621
-      01000BC6H   LINE      CODE     ---       #634
-      01000BC9H   LINE      CODE     ---       #637
-      01000BCCH   LINE      CODE     ---       #638
-      01000BCFH   LINE      CODE     ---       #641
-      01000BD5H   LINE      CODE     ---       #642
-      01000BD5H   LINE      CODE     ---       #643
-      01000BD7H   LINE      CODE     ---       #644
-      01000BD7H   LINE      CODE     ---       #648
-      01000BDEH   LINE      CODE     ---       #649
-      01000BDEH   LINE      CODE     ---       #651
-      01000BE1H   LINE      CODE     ---       #652
-      01000BE1H   LINE      CODE     ---       #653
-      01000BE6H   LINE      CODE     ---       #654
-      01000BE8H   LINE      CODE     ---       #655
-      01000BEAH   LINE      CODE     ---       #659
-      01000BEAH   LINE      CODE     ---       #660
-      01000BEDH   LINE      CODE     ---       #661
-      01000BEDH   LINE      CODE     ---       #662
-      01000BEFH   LINE      CODE     ---       #663
-      01000BEFH   LINE      CODE     ---       #684
-      01000BF1H   LINE      CODE     ---       #687
+      01000BCEH   LINE      CODE     ---       #612
+      01000BCEH   LINE      CODE     ---       #613
+      01000BD1H   LINE      CODE     ---       #614
+      01000BD1H   LINE      CODE     ---       #618
+      01000BD1H   LINE      CODE     ---       #620
+      01000BD4H   LINE      CODE     ---       #621
+      01000BD4H   LINE      CODE     ---       #634
+      01000BD7H   LINE      CODE     ---       #637
+      01000BDAH   LINE      CODE     ---       #638
+      01000BDDH   LINE      CODE     ---       #641
+      01000BE3H   LINE      CODE     ---       #642
+      01000BE3H   LINE      CODE     ---       #643
+      01000BE5H   LINE      CODE     ---       #644
+      01000BE5H   LINE      CODE     ---       #648
+      01000BECH   LINE      CODE     ---       #649
+      01000BECH   LINE      CODE     ---       #651
+      01000BEFH   LINE      CODE     ---       #652
+      01000BEFH   LINE      CODE     ---       #653
+      01000BF4H   LINE      CODE     ---       #654
+      01000BF6H   LINE      CODE     ---       #655
+      01000BF8H   LINE      CODE     ---       #659
+      01000BF8H   LINE      CODE     ---       #660
+      01000BFBH   LINE      CODE     ---       #661
+      01000BFBH   LINE      CODE     ---       #662
+      01000BFDH   LINE      CODE     ---       #663
+      01000BFDH   LINE      CODE     ---       #684
+      01000BFFH   LINE      CODE     ---       #687
       ---         BLOCKEND  ---      ---       LVL=0
       00000007H   SYMBOL    DATA     BYTE      savedPage
 
-      0100095DH   BLOCK     CODE     ---       LVL=0
-      0100097AH   BLOCK     CODE     NEAR LAB  LVL=1
+      01000900H   BLOCK     CODE     ---       LVL=0
+      0100091DH   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      intFlags
       00000007H   SYMBOL    DATA     BYTE      fifoFlags
-      010009ABH   BLOCK     CODE     NEAR LAB  LVL=2
+      0100094EH   BLOCK     CODE     NEAR LAB  LVL=2
       00000027H   SYMBOL    DATA     BYTE      dummy
       ---         BLOCKEND  ---      ---       LVL=2
       ---         BLOCKEND  ---      ---       LVL=1
-      0100095DH   LINE      CODE     ---       #733
-      0100097AH   LINE      CODE     ---       #740
-      0100097DH   LINE      CODE     ---       #743
-      01000981H   LINE      CODE     ---       #744
-      01000986H   LINE      CODE     ---       #749
-      01000988H   LINE      CODE     ---       #754
-      0100098CH   LINE      CODE     ---       #755
-      0100098CH   LINE      CODE     ---       #761
-      01000995H   LINE      CODE     ---       #763
-      01000995H   LINE      CODE     ---       #765
-      01000998H   LINE      CODE     ---       #766
-      01000998H   LINE      CODE     ---       #767
-      010009A1H   LINE      CODE     ---       #768
-      010009A9H   LINE      CODE     ---       #769
-      010009ABH   LINE      CODE     ---       #773
-      010009ABH   LINE      CODE     ---       #774
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 63
+      01000900H   LINE      CODE     ---       #733
+      0100091DH   LINE      CODE     ---       #740
+      01000920H   LINE      CODE     ---       #743
+      01000924H   LINE      CODE     ---       #744
+      01000929H   LINE      CODE     ---       #749
+      0100092BH   LINE      CODE     ---       #754
+      0100092FH   LINE      CODE     ---       #755
+      0100092FH   LINE      CODE     ---       #761
+      01000938H   LINE      CODE     ---       #763
+      01000938H   LINE      CODE     ---       #765
+      0100093BH   LINE      CODE     ---       #766
+      0100093BH   LINE      CODE     ---       #767
+      01000944H   LINE      CODE     ---       #768
+      0100094CH   LINE      CODE     ---       #769
+      0100094EH   LINE      CODE     ---       #773
+      0100094EH   LINE      CODE     ---       #774
+      01000951H   LINE      CODE     ---       #775
+      01000951H   LINE      CODE     ---       #776
+      01000954H   LINE      CODE     ---       #780
+      01000954H   LINE      CODE     ---       #781
+      01000954H   LINE      CODE     ---       #783
+      0100095AH   LINE      CODE     ---       #784
+      0100095AH   LINE      CODE     ---       #785
+      0100095CH   LINE      CODE     ---       #786
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 63
 
 
-      010009AEH   LINE      CODE     ---       #775
-      010009AEH   LINE      CODE     ---       #776
-      010009B1H   LINE      CODE     ---       #780
-      010009B1H   LINE      CODE     ---       #781
-      010009B1H   LINE      CODE     ---       #783
-      010009B7H   LINE      CODE     ---       #784
-      010009B7H   LINE      CODE     ---       #785
-      010009B9H   LINE      CODE     ---       #786
-      010009B9H   LINE      CODE     ---       #788
-      010009BCH   LINE      CODE     ---       #789
-      010009BEH   LINE      CODE     ---       #794
-      010009BEH   LINE      CODE     ---       #795
-      010009C1H   LINE      CODE     ---       #796
-      010009C1H   LINE      CODE     ---       #797
-      010009C1H   LINE      CODE     ---       #804
-      010009C8H   LINE      CODE     ---       #806
-      010009C8H   LINE      CODE     ---       #808
-      010009CBH   LINE      CODE     ---       #809
-      010009CBH   LINE      CODE     ---       #810
-      010009D0H   LINE      CODE     ---       #811
-      010009D2H   LINE      CODE     ---       #812
-      010009D4H   LINE      CODE     ---       #816
-      010009D4H   LINE      CODE     ---       #817
-      010009D7H   LINE      CODE     ---       #818
-      010009D7H   LINE      CODE     ---       #819
-      010009D9H   LINE      CODE     ---       #820
-      010009D9H   LINE      CODE     ---       #821
-      010009D9H   LINE      CODE     ---       #833
+      0100095CH   LINE      CODE     ---       #788
+      0100095FH   LINE      CODE     ---       #789
+      01000961H   LINE      CODE     ---       #794
+      01000961H   LINE      CODE     ---       #795
+      01000964H   LINE      CODE     ---       #796
+      01000964H   LINE      CODE     ---       #797
+      01000964H   LINE      CODE     ---       #804
+      0100096BH   LINE      CODE     ---       #806
+      0100096BH   LINE      CODE     ---       #808
+      0100096EH   LINE      CODE     ---       #809
+      0100096EH   LINE      CODE     ---       #810
+      01000973H   LINE      CODE     ---       #811
+      01000975H   LINE      CODE     ---       #812
+      01000977H   LINE      CODE     ---       #816
+      01000977H   LINE      CODE     ---       #817
+      0100097AH   LINE      CODE     ---       #818
+      0100097AH   LINE      CODE     ---       #819
+      0100097CH   LINE      CODE     ---       #820
+      0100097CH   LINE      CODE     ---       #821
+      0100097CH   LINE      CODE     ---       #833
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       INITDEVICE
-      01000E0EH   PUBLIC    CODE     ---       PORTS_3_enter_DefaultMode_from_RESET
+      01000E0BH   PUBLIC    CODE     ---       PORTS_3_enter_DefaultMode_from_RESET
       0100002EH   PUBLIC    CODE     ---       PORTS_2_enter_DefaultMode_from_RESET
-      01000E07H   PUBLIC    CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
-      01000DEDH   PUBLIC    CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
-      01000D63H   PUBLIC    CODE     ---       TIMER16_3_enter_DefaultMode_from_RESET
-      01000DE3H   PUBLIC    CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
-      01000E00H   PUBLIC    CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
+      01000E04H   PUBLIC    CODE     ---       PORTS_1_enter_DefaultMode_from_RESET
+      01000DEAH   PUBLIC    CODE     ---       PORTS_0_enter_DefaultMode_from_RESET
+      01000D70H   PUBLIC    CODE     ---       TIMER16_3_enter_DefaultMode_from_RESET
+      01000DE0H   PUBLIC    CODE     ---       PBCFG_0_enter_DefaultMode_from_RESET
+      01000DFDH   PUBLIC    CODE     ---       INTERRUPT_0_enter_DefaultMode_from_RESET
       01000036H   PUBLIC    CODE     ---       SPI_0_enter_DefaultMode_from_RESET
-      01000DF7H   PUBLIC    CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
-      01000DD9H   PUBLIC    CODE     ---       WDT_0_enter_DefaultMode_from_RESET
-      01000D01H   PUBLIC    CODE     ---       enter_DefaultMode_from_RESET
+      01000DF4H   PUBLIC    CODE     ---       CLOCK_0_enter_DefaultMode_from_RESET
+      01000DD6H   PUBLIC    CODE     ---       WDT_0_enter_DefaultMode_from_RESET
+      01000CE9H   PUBLIC    CODE     ---       enter_DefaultMode_from_RESET
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -4094,9 +4086,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000E8H.5 SFRSYM    DATA     BIT       CLIF0_C2RIF
       0000008FH   SFRSYM    DATA     BYTE      PSCTL
       000000E8H.7 SFRSYM    DATA     BIT       CLIF0_C3RIF
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 64
-
-
       000000E4H   SFRSYM    DATA     BYTE      IT01CF
       000000C0H.6 SFRSYM    DATA     BIT       SMB0CN0_TXMODE
       000000ADH   SFRSYM    DATA     BYTE      DERIVID
@@ -4105,6 +4094,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000A5H   SFRSYM    DATA     BYTE      P1MDOUT
       000000E8H.5 SFRSYM    DATA     BIT       ADC0CN0_ADINT
       000000CBH   SFRSYM    DATA     BYTE      TMR2RLH
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 64
+
+
       000000A6H   SFRSYM    DATA     BYTE      P2MDOUT
       000000A8H   SFRSYM    DATA     BYTE      IE
       00000093H   SFRSYM    DATA     BYTE      TMR3RLH
@@ -4159,9 +4151,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000F0H.7 SFRSYM    DATA     BIT       B_B7
       000000AFH   SFRSYM    DATA     BYTE      PCA0CPM4
       000000DDH   SFRSYM    DATA     BYTE      PCA0CPL5
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 65
-
-
       000000C3H   SFRSYM    DATA     BYTE      SMB0FCN0
       000000CCH   SFRSYM    DATA     BYTE      PCA0CPM5
       000000B5H   SFRSYM    DATA     BYTE      ADC0ASAL
@@ -4170,6 +4159,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C1H   SFRSYM    DATA     BYTE      SMB0CF
       000000E2H   SFRSYM    DATA     BYTE      XBR1
       000000C1H   SFRSYM    DATA     BYTE      PFE0CN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 65
+
+
       000000E7H   SFRSYM    DATA     BYTE      EMI0CN
       000000C0H.5 SFRSYM    DATA     BIT       SMB0CN0_STA
       000000E3H   SFRSYM    DATA     BYTE      XBR2
@@ -4224,9 +4216,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000F3H   SFRSYM    DATA     BYTE      P2MDIN
       000000B5H   SFRSYM    DATA     BYTE      CLU2FN
       000000C0H.4 SFRSYM    DATA     BIT       SMB0CN0_STO
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 66
-
-
       000000F4H   SFRSYM    DATA     BYTE      P3MDIN
       000000B9H   SFRSYM    DATA     BYTE      I2C0STAT
       000000BBH   SFRSYM    DATA     BYTE      I2C0DOUT
@@ -4235,6 +4224,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000FEH   SFRSYM    DATA     BYTE      P0MASK
       000000D8H.5 SFRSYM    DATA     BIT       UART1FCN1_TXHOLD
       000000EEH   SFRSYM    DATA     BYTE      P1MASK
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 66
+
+
       000000FCH   SFRSYM    DATA     BYTE      P2MASK
       000000D0H.3 SFRSYM    DATA     BIT       PSW_RS0
       000000D8H.7 SFRSYM    DATA     BIT       PCA0CN0_CF
@@ -4289,9 +4281,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000085H   SFRSYM    DATA     BYTE      CLU1MX
       000000B2H   SFRSYM    DATA     BYTE      ADC0CN1
       000000D8H.6 SFRSYM    DATA     BIT       PCA0CN0_CR
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 67
-
-
       000000A8H.2 SFRSYM    DATA     BIT       IE_EX1
       00000088H.5 SFRSYM    DATA     BIT       DACGCF0_D3SRC1
       00000091H   SFRSYM    DATA     BYTE      CLU2MX
@@ -4300,6 +4289,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000AAH   SFRSYM    DATA     BYTE      PSTAT0
       000000AEH   SFRSYM    DATA     BYTE      CLU3MX
       00000098H.7 SFRSYM    DATA     BIT       SCON0_SMODE
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 67
+
+
       000000B5H   SFRSYM    DATA     BYTE      DEVICEID
       000000A9H   SFRSYM    DATA     BYTE      CLKSEL
       000000F8H   SFRSYM    DATA     BIT       SPI0CN0_SPIEN
@@ -4354,9 +4346,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000008AH   SFRSYM    DATA     BYTE      TL0
       000000D0H.5 SFRSYM    DATA     BIT       PSW_F0
       000000A8H.6 SFRSYM    DATA     BIT       IE_ESPI0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 68
-
-
       0000008BH   SFRSYM    DATA     BYTE      TL1
       000000F9H   SFRSYM    DATA     BYTE      PCA0L
       000000C0H   SFRSYM    DATA     BIT       SMB0CN0_SI
@@ -4365,6 +4354,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B8H   SFRSYM    DATA     BIT       IP_PX0
       00000090H   SFRSYM    DATA     BIT       P1_B0
       00000080H.1 SFRSYM    DATA     BIT       P0_B1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 68
+
+
       000000B8H.2 SFRSYM    DATA     BIT       IP_PX1
       00000088H.7 SFRSYM    DATA     BIT       DACGCF0_D23REFSL
       0000009EH   SFRSYM    DATA     BYTE      UART1LIN
@@ -4419,9 +4411,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000F8H   SFRSYM    DATA     BYTE      SPI0CN0
       000000C7H   SFRSYM    DATA     BYTE      HFO0CAL
       00000088H.5 SFRSYM    DATA     BIT       TCON_TF0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 69
-
-
       00000098H   SFRSYM    DATA     BIT       SCON0_RI
       000000D6H   SFRSYM    DATA     BYTE      HFO1CAL
       00000082H   SFRSYM    DATA     BYTE      DPL
@@ -4430,6 +4419,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000099H   SFRSYM    DATA     BYTE      SBUF0
       00000087H   SFRSYM    DATA     BYTE      PCON0
       000000F2H   SFRSYM    DATA     BYTE      IPH
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 69
+
+
       000000C3H   SFRSYM    DATA     BYTE      ADC0GTL
       00000098H.7 SFRSYM    DATA     BIT       TMR4CN0_TF4H
       00000098H.3 SFRSYM    DATA     BIT       TMR4CN0_T4SPLIT
@@ -4484,9 +4476,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000D3H   SFRSYM    DATA     BYTE      CRC0CNT
       000000A5H   SFRSYM    DATA     BYTE      TMR4H
       00000098H.4 SFRSYM    DATA     BIT       TMR4CN0_TF4CEN
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 70
-
-
       000000D5H   SFRSYM    DATA     BYTE      TMR5H
       000000EFH   SFRSYM    DATA     BYTE      SMB0FCT
       00000096H   SFRSYM    DATA     BYTE      PCA0POL
@@ -4495,6 +4484,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000F8H.7 SFRSYM    DATA     BIT       SPI0CN0_SPIF
       00000094H   SFRSYM    DATA     BYTE      TMR3L
       000000A8H.7 SFRSYM    DATA     BIT       IE_EA
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 70
+
+
       000000A4H   SFRSYM    DATA     BYTE      TMR4L
       000000D4H   SFRSYM    DATA     BYTE      TMR5L
       000000C8H.5 SFRSYM    DATA     BIT       TMR2CN0_TF2LEN
@@ -4521,113 +4513,113 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000E8H.6 SFRSYM    DATA     BIT       CLIF0_C3FIF
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
 
-      01000D01H   BLOCK     CODE     ---       LVL=0
-      01000D01H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000CE9H   BLOCK     CODE     ---       LVL=0
+      01000CE9H   BLOCK     CODE     NEAR LAB  LVL=1
       0000005FH   SYMBOL    DATA     BYTE      SFRPAGE_save
       ---         BLOCKEND  ---      ---       LVL=1
-      01000D01H   LINE      CODE     ---       #22
-      01000D01H   LINE      CODE     ---       #25
-      01000D04H   LINE      CODE     ---       #26
-      01000D07H   LINE      CODE     ---       #27
-      01000D0AH   LINE      CODE     ---       #28
-      01000D0DH   LINE      CODE     ---       #29
-      01000D10H   LINE      CODE     ---       #30
-      01000D13H   LINE      CODE     ---       #31
-      01000D16H   LINE      CODE     ---       #32
-      01000D19H   LINE      CODE     ---       #33
-      01000D1CH   LINE      CODE     ---       #34
-      01000D1FH   LINE      CODE     ---       #35
-      01000D22H   LINE      CODE     ---       #37
-      01000D25H   LINE      CODE     ---       #40
+      01000CE9H   LINE      CODE     ---       #22
+      01000CE9H   LINE      CODE     ---       #25
+      01000CECH   LINE      CODE     ---       #26
+      01000CEFH   LINE      CODE     ---       #27
+      01000CF2H   LINE      CODE     ---       #28
+      01000CF5H   LINE      CODE     ---       #29
+      01000CF8H   LINE      CODE     ---       #30
+      01000CFBH   LINE      CODE     ---       #31
+      01000CFEH   LINE      CODE     ---       #32
+      01000D01H   LINE      CODE     ---       #33
+      01000D04H   LINE      CODE     ---       #34
+      01000D07H   LINE      CODE     ---       #35
+      01000D0AH   LINE      CODE     ---       #37
+      01000D0DH   LINE      CODE     ---       #40
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000DD9H   BLOCK     CODE     ---       LVL=0
-      01000DD9H   LINE      CODE     ---       #42
-      01000DD9H   LINE      CODE     ---       #44
-      01000DDCH   LINE      CODE     ---       #46
-      01000DDFH   LINE      CODE     ---       #47
-      01000DE2H   LINE      CODE     ---       #50
+      01000DD6H   BLOCK     CODE     ---       LVL=0
+      01000DD6H   LINE      CODE     ---       #42
+      01000DD6H   LINE      CODE     ---       #44
+      01000DD9H   LINE      CODE     ---       #46
+      01000DDCH   LINE      CODE     ---       #47
+      01000DDFH   LINE      CODE     ---       #50
       ---         BLOCKEND  ---      ---       LVL=0
 
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 71
-
-
-      01000DF7H   BLOCK     CODE     ---       LVL=0
-      01000DF7H   LINE      CODE     ---       #52
-      01000DF7H   LINE      CODE     ---       #63
-      01000DFAH   LINE      CODE     ---       #64
-      01000DFFH   LINE      CODE     ---       #68
+      01000DF4H   BLOCK     CODE     ---       LVL=0
+      01000DF4H   LINE      CODE     ---       #52
+      01000DF4H   LINE      CODE     ---       #61
+      01000DF7H   LINE      CODE     ---       #62
+      01000DFCH   LINE      CODE     ---       #66
       ---         BLOCKEND  ---      ---       LVL=0
 
       01000036H   BLOCK     CODE     ---       LVL=0
-      01000036H   LINE      CODE     ---       #70
-      01000036H   LINE      CODE     ---       #75
-      01000039H   LINE      CODE     ---       #83
-      0100003CH   LINE      CODE     ---       #95
-      0100003FH   LINE      CODE     ---       #96
-      01000042H   LINE      CODE     ---       #99
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 71
+
+
+      01000036H   LINE      CODE     ---       #68
+      01000036H   LINE      CODE     ---       #73
+      01000039H   LINE      CODE     ---       #80
+      0100003CH   LINE      CODE     ---       #91
+      0100003FH   LINE      CODE     ---       #92
+      01000042H   LINE      CODE     ---       #101
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000E00H   BLOCK     CODE     ---       LVL=0
-      01000E00H   LINE      CODE     ---       #101
-      01000E00H   LINE      CODE     ---       #121
-      01000E03H   LINE      CODE     ---       #158
-      01000E06H   LINE      CODE     ---       #169
+      01000DFDH   BLOCK     CODE     ---       LVL=0
+      01000DFDH   LINE      CODE     ---       #103
+      01000DFDH   LINE      CODE     ---       #115
+      01000E00H   LINE      CODE     ---       #146
+      01000E03H   LINE      CODE     ---       #157
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000DE3H   BLOCK     CODE     ---       LVL=0
-      01000DE3H   LINE      CODE     ---       #171
-      01000DE3H   LINE      CODE     ---       #185
-      01000DE6H   LINE      CODE     ---       #186
-      01000DE9H   LINE      CODE     ---       #213
-      01000DECH   LINE      CODE     ---       #221
+      01000DE0H   BLOCK     CODE     ---       LVL=0
+      01000DE0H   LINE      CODE     ---       #159
+      01000DE0H   LINE      CODE     ---       #168
+      01000DE3H   LINE      CODE     ---       #169
+      01000DE6H   LINE      CODE     ---       #188
+      01000DE9H   LINE      CODE     ---       #196
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000D63H   BLOCK     CODE     ---       LVL=0
-      01000D63H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000D70H   BLOCK     CODE     ---       LVL=0
+      01000D70H   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      TMR3CN0_TR3_save
       ---         BLOCKEND  ---      ---       LVL=1
-      01000D63H   LINE      CODE     ---       #223
-      01000D63H   LINE      CODE     ---       #227
-      01000D67H   LINE      CODE     ---       #229
-      01000D6AH   LINE      CODE     ---       #242
-      01000D6DH   LINE      CODE     ---       #249
-      01000D70H   LINE      CODE     ---       #256
-      01000D73H   LINE      CODE     ---       #263
-      01000D76H   LINE      CODE     ---       #270
-      01000D79H   LINE      CODE     ---       #275
-      01000D7BH   LINE      CODE     ---       #278
+      01000D70H   LINE      CODE     ---       #198
+      01000D70H   LINE      CODE     ---       #202
+      01000D74H   LINE      CODE     ---       #204
+      01000D77H   LINE      CODE     ---       #217
+      01000D7AH   LINE      CODE     ---       #224
+      01000D7DH   LINE      CODE     ---       #231
+      01000D80H   LINE      CODE     ---       #238
+      01000D83H   LINE      CODE     ---       #245
+      01000D86H   LINE      CODE     ---       #250
+      01000D88H   LINE      CODE     ---       #253
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000DEDH   BLOCK     CODE     ---       LVL=0
-      01000DEDH   LINE      CODE     ---       #280
-      01000DEDH   LINE      CODE     ---       #302
-      01000DF0H   LINE      CODE     ---       #330
-      01000DF3H   LINE      CODE     ---       #354
-      01000DF6H   LINE      CODE     ---       #362
+      01000DEAH   BLOCK     CODE     ---       LVL=0
+      01000DEAH   LINE      CODE     ---       #255
+      01000DEAH   LINE      CODE     ---       #270
+      01000DEDH   LINE      CODE     ---       #290
+      01000DF0H   LINE      CODE     ---       #313
+      01000DF3H   LINE      CODE     ---       #321
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000E07H   BLOCK     CODE     ---       LVL=0
-      01000E07H   LINE      CODE     ---       #364
-      01000E07H   LINE      CODE     ---       #385
-      01000E0AH   LINE      CODE     ---       #413
-      01000E0DH   LINE      CODE     ---       #424
+      01000E04H   BLOCK     CODE     ---       LVL=0
+      01000E04H   LINE      CODE     ---       #323
+      01000E04H   LINE      CODE     ---       #338
+      01000E07H   LINE      CODE     ---       #358
+      01000E0AH   LINE      CODE     ---       #369
       ---         BLOCKEND  ---      ---       LVL=0
-
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 72
-
 
       0100002EH   BLOCK     CODE     ---       LVL=0
-      0100002EH   LINE      CODE     ---       #426
-      0100002EH   LINE      CODE     ---       #446
-      01000031H   LINE      CODE     ---       #464
+      0100002EH   LINE      CODE     ---       #371
+      0100002EH   LINE      CODE     ---       #385
+      01000031H   LINE      CODE     ---       #403
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000E0EH   BLOCK     CODE     ---       LVL=0
-      01000E0EH   LINE      CODE     ---       #466
-      01000E0EH   LINE      CODE     ---       #484
-      01000E11H   LINE      CODE     ---       #485
-      01000E14H   LINE      CODE     ---       #493
+      01000E0BH   BLOCK     CODE     ---       LVL=0
+      01000E0BH   LINE      CODE     ---       #405
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 72
+
+
+      01000E0BH   LINE      CODE     ---       #418
+      01000E0EH   LINE      CODE     ---       #419
+      01000E11H   LINE      CODE     ---       #427
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       ?C_STARTUP
@@ -4641,14 +4633,14 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000000H   SYMBOL    NUMBER   ---       IBPSTACK
       00000100H   SYMBOL    NUMBER   ---       IBPSTACKTOP
       00000080H   SYMBOL    NUMBER   ---       IDATALEN
-      010009F7H   SYMBOL    CODE     NEAR LAB  IDATALOOP
+      0100099AH   SYMBOL    CODE     NEAR LAB  IDATALOOP
       00000000H   SYMBOL    NUMBER   ---       PBPSTACK
       00000100H   SYMBOL    NUMBER   ---       PBPSTACKTOP
       00000000H   SYMBOL    NUMBER   ---       PDATALEN
       00000000H   SYMBOL    NUMBER   ---       PDATASTART
       00000000H   SYMBOL    NUMBER   ---       PPAGE
       00000000H   SYMBOL    NUMBER   ---       PPAGEENABLE
-      010009F4H   SYMBOL    CODE     NEAR LAB  STARTUP1
+      01000997H   SYMBOL    CODE     NEAR LAB  STARTUP1
       00000000H   SYMBOL    NUMBER   ---       XBPSTACK
       00010000H   SYMBOL    NUMBER   ---       XBPSTACKTOP
       00000000H   SYMBOL    NUMBER   ---       XDATALEN
@@ -4658,18 +4650,18 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       01000000H   LINE      CODE     ---       #126
       ---         BLOCKEND  ---      ---       LVL=0
 
-      010009F4H   BLOCK     CODE     NEAR LAB  LVL=0
-      010009F4H   LINE      CODE     ---       #138
-      010009F6H   LINE      CODE     ---       #139
-      010009F7H   LINE      CODE     ---       #140
-      010009F8H   LINE      CODE     ---       #141
-      010009FAH   LINE      CODE     ---       #190
-      010009FDH   LINE      CODE     ---       #201
+      01000997H   BLOCK     CODE     NEAR LAB  LVL=0
+      01000997H   LINE      CODE     ---       #138
+      01000999H   LINE      CODE     ---       #139
+      0100099AH   LINE      CODE     ---       #140
+      0100099BH   LINE      CODE     ---       #141
+      0100099DH   LINE      CODE     ---       #190
+      010009A0H   LINE      CODE     ---       #201
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       DRAW
       00000080H   PUBLIC    IDATA    ---       Line
-      01000A80H   PUBLIC    CODE     ---       _DrawScreenText
+      01000A8EH   PUBLIC    CODE     ---       _DrawScreenText
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -4679,9 +4671,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000F8H.1 SFRSYM    DATA     BIT       SPI0CN0_TXNF
       00000097H   SFRSYM    DATA     BYTE      WDTCN
       000000A0H   SFRSYM    DATA     BYTE      P2
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 73
-
-
       000000B0H   SFRSYM    DATA     BYTE      P3
       000000C0H.7 SFRSYM    DATA     BIT       SMB0CN0_MASTER
       000000F9H   SFRSYM    DATA     WORD      PCA0
@@ -4690,6 +4679,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000E8H.1 SFRSYM    DATA     BIT       CLIF0_C0RIF
       000000F3H   SFRSYM    DATA     BYTE      EIE2
       000000E8H.3 SFRSYM    DATA     BIT       CLIF0_C1RIF
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 73
+
+
       000000E8H.5 SFRSYM    DATA     BIT       CLIF0_C2RIF
       0000008FH   SFRSYM    DATA     BYTE      PSCTL
       00000080H.2 SFRSYM    DATA     BIT       BSP_PB0
@@ -4744,9 +4736,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B6H   SFRSYM    DATA     BYTE      ADC0ASAH
       000000F0H.5 SFRSYM    DATA     BIT       B_B5
       000000E8H.6 SFRSYM    DATA     BIT       ADC0CN0_IPOEN
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 74
-
-
       000000E8H   SFRSYM    DATA     BIT       ADC0CN0_TEMPE
       000000DCH   SFRSYM    DATA     BYTE      PCA0CPM2
       000000F4H   SFRSYM    DATA     BYTE      PCA0CPL3
@@ -4755,6 +4744,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C5H   SFRSYM    DATA     WORD      ADC0LT
       000000AEH   SFRSYM    DATA     BYTE      PCA0CPM3
       00000084H   SFRSYM    DATA     BYTE      PCA0CPL4
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 74
+
+
       000000D8H.6 SFRSYM    DATA     BIT       UART1FCN1_TXNF
       00000098H.5 SFRSYM    DATA     BIT       SCON0_MCE
       000000F0H.7 SFRSYM    DATA     BIT       B_B7
@@ -4809,9 +4801,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000094H   SFRSYM    DATA     BYTE      SBCON1
       000000D8H.4 SFRSYM    DATA     BIT       PCA0CN0_CCF4
       000000D4H   SFRSYM    DATA     WORD      TMR5
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 75
-
-
       000000C0H.3 SFRSYM    DATA     BIT       SMB0CN0_ACKRQ
       000000D8H.5 SFRSYM    DATA     BIT       PCA0CN0_CCF5
       000000FFH   SFRSYM    DATA     BYTE      VDM0CN
@@ -4820,6 +4809,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000098H.4 SFRSYM    DATA     BIT       SCON0_REN
       000000ACH   SFRSYM    DATA     BYTE      SMB0TC
       000000F2H   SFRSYM    DATA     BYTE      P1MDIN
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 75
+
+
       000000B2H   SFRSYM    DATA     BYTE      CLU1FN
       000000C8H.4 SFRSYM    DATA     BIT       SCON1_REN
       000000F3H   SFRSYM    DATA     BYTE      P2MDIN
@@ -4874,9 +4866,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000090H.7 SFRSYM    DATA     BIT       BSP_JOYSTICK
       000000D8H   SFRSYM    DATA     BIT       UART1FCN1_RIE
       000000C0H   SFRSYM    DATA     BIT       TMR5CN0_T5XCLK0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 76
-
-
       000000A8H.5 SFRSYM    DATA     BIT       IE_ET2
       00000088H   SFRSYM    DATA     BIT       DACGCF0_D1SRC0
       000000D5H   SFRSYM    DATA     BYTE      P1SKIP
@@ -4885,6 +4874,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000CCH   SFRSYM    DATA     BYTE      P2SKIP
       00000084H   SFRSYM    DATA     BYTE      CLU0MX
       000000E8H   SFRSYM    DATA     BYTE      ADC0CN0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 76
+
+
       000000D8H.4 SFRSYM    DATA     BIT       UART1FCN1_TIE
       000000A8H   SFRSYM    DATA     BIT       IE_EX0
       00000088H.4 SFRSYM    DATA     BIT       DACGCF0_D3SRC0
@@ -4939,9 +4931,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000A2H   SFRSYM    DATA     BYTE      DACGCF2
       00000086H   SFRSYM    DATA     BYTE      CRC0CN1
       000000B8H.4 SFRSYM    DATA     BIT       IP_PS0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 77
-
-
       00000084H   SFRSYM    DATA     WORD      PCA0CP4
       000000FAH   SFRSYM    DATA     BYTE      UART1FCT
       0000008DH   SFRSYM    DATA     BYTE      TH1
@@ -4950,6 +4939,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000090H.6 SFRSYM    DATA     BIT       BSP_LED_R
       000000B8H.1 SFRSYM    DATA     BIT       IP_PT0
       000000DDH   SFRSYM    DATA     WORD      PCA0CP5
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 77
+
+
       000000C7H   SFRSYM    DATA     BYTE      CLIE0
       000000B8H.3 SFRSYM    DATA     BIT       IP_PT1
       00000088H.3 SFRSYM    DATA     BIT       DACGCF0_D01REFSL
@@ -5004,9 +4996,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000EEH   SFRSYM    DATA     BYTE      EIP1H
       000000D8H.2 SFRSYM    DATA     BIT       UART1FCN1_RXTO1
       000000B0H.4 SFRSYM    DATA     BIT       P3_B4
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 78
-
-
       000000A0H.5 SFRSYM    DATA     BIT       P2_B5
       00000090H.6 SFRSYM    DATA     BIT       P1_B6
       00000080H.7 SFRSYM    DATA     BIT       P0_B7
@@ -5015,6 +5004,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000F6H   SFRSYM    DATA     BYTE      EIP2H
       000000A0H.6 SFRSYM    DATA     BIT       P2_B6
       00000090H.7 SFRSYM    DATA     BIT       P1_B7
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 78
+
+
       00000098H.3 SFRSYM    DATA     BIT       DACGCF1_D3UDIS
       000000B0H.7 SFRSYM    DATA     BIT       P3_B7
       00000083H   SFRSYM    DATA     BYTE      DPH
@@ -5069,9 +5061,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000E8H.2 SFRSYM    DATA     BIT       ADC0CN0_ADGN1
       000000C8H   SFRSYM    DATA     BYTE      TMR2CN0
       00000091H   SFRSYM    DATA     BYTE      TMR3CN0
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 79
-
-
       000000FDH   SFRSYM    DATA     BYTE      TMR2CN1
       00000098H   SFRSYM    DATA     BYTE      TMR4CN0
       000000FEH   SFRSYM    DATA     BYTE      TMR3CN1
@@ -5080,6 +5069,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000FFH   SFRSYM    DATA     BYTE      TMR4CN1
       000000D7H   SFRSYM    DATA     BYTE      SMB0ADR
       00000088H.4 SFRSYM    DATA     BIT       TCON_TR0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 79
+
+
       000000F1H   SFRSYM    DATA     BYTE      TMR5CN1
       000000C8H.4 SFRSYM    DATA     BIT       TMR2CN0_TF2CEN
       00000088H.6 SFRSYM    DATA     BIT       TCON_TR1
@@ -5125,47 +5117,47 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C0H.5 SFRSYM    DATA     BIT       TMR5CN0_TF5LEN
       000000E8H.6 SFRSYM    DATA     BIT       CLIF0_C3FIF
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
-      01000E18H   SYMBOL    CONST    ---       splash_bits
-      01000D47H   SYMBOL    CODE     ---       _RENDER_ClrLineSegment
+      01000E15H   SYMBOL    CONST    ---       splash_bits
+      01000D54H   SYMBOL    CODE     ---       _RENDER_ClrLineSegment
 
-      01000D47H   BLOCK     CODE     ---       LVL=0
+      01000D54H   BLOCK     CODE     ---       LVL=0
       00000007H   SYMBOL    DATA     ---       line
       00000005H   SYMBOL    DATA     BYTE      x1
       00000003H   SYMBOL    DATA     BYTE      x2
-      01000D47H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000D54H   BLOCK     CODE     NEAR LAB  LVL=1
       00000006H   SYMBOL    DATA     BYTE      i
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 80
-
-
       ---         BLOCKEND  ---      ---       LVL=1
-      01000D47H   LINE      CODE     ---       #33
-      01000D47H   LINE      CODE     ---       #35
-      01000D47H   LINE      CODE     ---       #37
-      01000D5AH   LINE      CODE     ---       #38
-      01000D5FH   LINE      CODE     ---       #39
-      01000D62H   LINE      CODE     ---       #40
+      01000D54H   LINE      CODE     ---       #33
+      01000D54H   LINE      CODE     ---       #35
+      01000D54H   LINE      CODE     ---       #37
+      01000D67H   LINE      CODE     ---       #38
+      01000D6CH   LINE      CODE     ---       #39
+      01000D6FH   LINE      CODE     ---       #40
       ---         BLOCKEND  ---      ---       LVL=0
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 80
 
-      01000A80H   BLOCK     CODE     ---       LVL=0
+
+
+      01000A8EH   BLOCK     CODE     ---       LVL=0
       0000005FH   SYMBOL    DATA     ---       str
       00000062H   SYMBOL    DATA     BYTE      y
-      01000A88H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000A96H   BLOCK     CODE     NEAR LAB  LVL=1
       00000063H   SYMBOL    DATA     BYTE      i
       00000064H   SYMBOL    DATA     BYTE      len
       ---         BLOCKEND  ---      ---       LVL=1
-      01000A80H   LINE      CODE     ---       #68
-      01000A88H   LINE      CODE     ---       #69
-      01000A88H   LINE      CODE     ---       #71
-      01000A8DH   LINE      CODE     ---       #74
-      01000A90H   LINE      CODE     ---       #75
-      01000A90H   LINE      CODE     ---       #76
-      01000A9EH   LINE      CODE     ---       #77
-      01000AA5H   LINE      CODE     ---       #79
-      01000AA8H   LINE      CODE     ---       #80
-      01000AB1H   LINE      CODE     ---       #81
-      01000AD1H   LINE      CODE     ---       #82
-      01000ADFH   LINE      CODE     ---       #83
-      01000AE8H   LINE      CODE     ---       #84
+      01000A8EH   LINE      CODE     ---       #68
+      01000A96H   LINE      CODE     ---       #69
+      01000A96H   LINE      CODE     ---       #71
+      01000A9BH   LINE      CODE     ---       #74
+      01000A9EH   LINE      CODE     ---       #75
+      01000A9EH   LINE      CODE     ---       #76
+      01000AACH   LINE      CODE     ---       #77
+      01000AB3H   LINE      CODE     ---       #79
+      01000AB6H   LINE      CODE     ---       #80
+      01000ABFH   LINE      CODE     ---       #81
+      01000ADFH   LINE      CODE     ---       #82
+      01000AEDH   LINE      CODE     ---       #83
+      01000AF6H   LINE      CODE     ---       #84
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       MAIN
@@ -5176,8 +5168,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000000AH   PUBLIC    DATA     INT       minute
       00000008H   PUBLIC    DATA     INT       toggle
       0100063FH   PUBLIC    CODE     ---       main
-      01000E15H   PUBLIC    CODE     ---       PMATCH_ISR
-      01000DA6H   PUBLIC    CODE     ---       UI_getButtons
+      01000A23H   PUBLIC    CODE     ---       TIMER3_ISR
+      01000E12H   PUBLIC    CODE     ---       PMATCH_ISR
+      01000DB3H   PUBLIC    CODE     ---       UI_getButtons
       000000A2H   SFRSYM    DATA     BYTE      SPI0CKR
       00000080H   SFRSYM    DATA     BYTE      P0
       000000C8H.6 SFRSYM    DATA     BIT       SCON1_PERR
@@ -5199,9 +5192,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       0000008FH   SFRSYM    DATA     BYTE      PSCTL
       00000080H.2 SFRSYM    DATA     BIT       BSP_PB0
       000000E8H.7 SFRSYM    DATA     BIT       CLIF0_C3RIF
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 81
-
-
       000000E4H   SFRSYM    DATA     BYTE      IT01CF
       00000080H.3 SFRSYM    DATA     BIT       BSP_PB1
       000000C0H.6 SFRSYM    DATA     BIT       SMB0CN0_TXMODE
@@ -5209,6 +5199,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000A7H   SFRSYM    DATA     BYTE      SFRPAGE
       000000A4H   SFRSYM    DATA     BYTE      P0MDOUT
       000000A5H   SFRSYM    DATA     BYTE      P1MDOUT
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 81
+
+
       000000E8H.5 SFRSYM    DATA     BIT       ADC0CN0_ADINT
       000000CBH   SFRSYM    DATA     BYTE      TMR2RLH
       000000A6H   SFRSYM    DATA     BYTE      P2MDOUT
@@ -5264,9 +5257,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000098H.5 SFRSYM    DATA     BIT       SCON0_MCE
       000000F0H.7 SFRSYM    DATA     BIT       B_B7
       000000AFH   SFRSYM    DATA     BYTE      PCA0CPM4
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 82
-
-
       000000DDH   SFRSYM    DATA     BYTE      PCA0CPL5
       000000C3H   SFRSYM    DATA     BYTE      SMB0FCN0
       000000CCH   SFRSYM    DATA     BYTE      PCA0CPM5
@@ -5274,6 +5264,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000E1H   SFRSYM    DATA     BYTE      XBR0
       000000C4H   SFRSYM    DATA     BYTE      SMB0FCN1
       000000C1H   SFRSYM    DATA     BYTE      SMB0CF
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 82
+
+
       000000E2H   SFRSYM    DATA     BYTE      XBR1
       000000C1H   SFRSYM    DATA     BYTE      PFE0CN
       000000E7H   SFRSYM    DATA     BYTE      EMI0CN
@@ -5329,9 +5322,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C8H.4 SFRSYM    DATA     BIT       SCON1_REN
       000000F3H   SFRSYM    DATA     BYTE      P2MDIN
       000000B5H   SFRSYM    DATA     BYTE      CLU2FN
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 83
-
-
       000000C0H.4 SFRSYM    DATA     BIT       SMB0CN0_STO
       000000F4H   SFRSYM    DATA     BYTE      P3MDIN
       000000B9H   SFRSYM    DATA     BYTE      I2C0STAT
@@ -5339,6 +5329,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000BEH   SFRSYM    DATA     BYTE      CLU3FN
       00000096H   SFRSYM    DATA     BYTE      SBRLH1
       000000FEH   SFRSYM    DATA     BYTE      P0MASK
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 83
+
+
       000000D8H.5 SFRSYM    DATA     BIT       UART1FCN1_TXHOLD
       000000EEH   SFRSYM    DATA     BYTE      P1MASK
       000000FCH   SFRSYM    DATA     BYTE      P2MASK
@@ -5394,9 +5387,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000A8H   SFRSYM    DATA     BIT       IE_EX0
       00000088H.4 SFRSYM    DATA     BIT       DACGCF0_D3SRC0
       00000085H   SFRSYM    DATA     BYTE      CLU1MX
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 84
-
-
       000000B2H   SFRSYM    DATA     BYTE      ADC0CN1
       000000D8H.6 SFRSYM    DATA     BIT       PCA0CN0_CR
       000000A8H.2 SFRSYM    DATA     BIT       IE_EX1
@@ -5404,6 +5394,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       00000091H   SFRSYM    DATA     BYTE      CLU2MX
       000000B3H   SFRSYM    DATA     BYTE      ADC0CN2
       00000090H.5 SFRSYM    DATA     BIT       BSP_LED_B
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 84
+
+
       000000C8H.7 SFRSYM    DATA     BIT       SCON1_OVR
       000000AAH   SFRSYM    DATA     BYTE      PSTAT0
       000000AEH   SFRSYM    DATA     BYTE      CLU3MX
@@ -5459,9 +5452,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B8H.3 SFRSYM    DATA     BIT       IP_PT1
       00000088H.3 SFRSYM    DATA     BIT       DACGCF0_D01REFSL
       000000B5H   SFRSYM    DATA     WORD      ADC0ASA
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 85
-
-
       000000E8H   SFRSYM    DATA     BYTE      CLIF0
       000000C0H.2 SFRSYM    DATA     BIT       SMB0CN0_ARBLOST
       000000B8H.5 SFRSYM    DATA     BIT       IP_PT2
@@ -5469,6 +5459,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000D0H.5 SFRSYM    DATA     BIT       PSW_F0
       000000A8H.6 SFRSYM    DATA     BIT       IE_ESPI0
       0000008BH   SFRSYM    DATA     BYTE      TL1
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 85
+
+
       000000F9H   SFRSYM    DATA     BYTE      PCA0L
       000000C0H   SFRSYM    DATA     BIT       SMB0CN0_SI
       000000D0H.1 SFRSYM    DATA     BIT       PSW_F1
@@ -5524,9 +5517,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000B0H.7 SFRSYM    DATA     BIT       P3_B7
       00000083H   SFRSYM    DATA     BYTE      DPH
       000000C4H   SFRSYM    DATA     BYTE      ADC0GTH
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 86
-
-
       000000C8H.7 SFRSYM    DATA     BIT       TMR2CN0_TF2H
       000000C8H.3 SFRSYM    DATA     BIT       TMR2CN0_T2SPLIT
       000000D0H.6 SFRSYM    DATA     BIT       PSW_AC
@@ -5534,6 +5524,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C7H   SFRSYM    DATA     BYTE      HFO0CAL
       00000088H.5 SFRSYM    DATA     BIT       TCON_TF0
       00000098H   SFRSYM    DATA     BIT       SCON0_RI
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 86
+
+
       000000D6H   SFRSYM    DATA     BYTE      HFO1CAL
       00000082H   SFRSYM    DATA     BYTE      DPL
       00000088H.7 SFRSYM    DATA     BIT       TCON_TF1
@@ -5589,9 +5582,6 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C8H.4 SFRSYM    DATA     BIT       TMR2CN0_TF2CEN
       00000088H.6 SFRSYM    DATA     BIT       TCON_TR1
       000000C2H   SFRSYM    DATA     BYTE      SMB0DAT
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 87
-
-
       000000A0H.6 SFRSYM    DATA     BIT       BSP_DISP_CS
       000000CFH   SFRSYM    DATA     BYTE      TMR2H
       000000A1H   SFRSYM    DATA     BYTE      SPI0CFG
@@ -5599,6 +5589,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000EFH   SFRSYM    DATA     BYTE      HFOCN
       000000D3H   SFRSYM    DATA     BYTE      CRC0CNT
       000000A5H   SFRSYM    DATA     BYTE      TMR4H
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 87
+
+
       00000098H.4 SFRSYM    DATA     BIT       TMR4CN0_TF4CEN
       000000D5H   SFRSYM    DATA     BYTE      TMR5H
       000000EFH   SFRSYM    DATA     BYTE      SMB0FCT
@@ -5633,119 +5626,126 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
       000000C0H.5 SFRSYM    DATA     BIT       TMR5CN0_TF5LEN
       000000E8H.6 SFRSYM    DATA     BIT       CLIF0_C3FIF
       000000B7H   SFRSYM    DATA     BYTE      FLKEY
-      01000CC6H   SYMBOL    CODE     ---       _?ix1000
-      01000CC9H   SYMBOL    CODE     ---       _?ix1001
+      01000D1DH   SYMBOL    CODE     ---       _?ix1000
+      01000D20H   SYMBOL    CODE     ---       _?ix1001
 
-      01000DA6H   BLOCK     CODE     ---       LVL=0
-      01000DA6H   BLOCK     CODE     NEAR LAB  LVL=1
+      01000DB3H   BLOCK     CODE     ---       LVL=0
+      01000DB3H   BLOCK     CODE     NEAR LAB  LVL=1
       00000007H   SYMBOL    DATA     BYTE      status
       ---         BLOCKEND  ---      ---       LVL=1
-      01000DA6H   LINE      CODE     ---       #72
-      01000DA6H   LINE      CODE     ---       #73
-      01000DA6H   LINE      CODE     ---       #74
-      01000DA8H   LINE      CODE     ---       #75
-      01000DB1H   LINE      CODE     ---       #76
-      01000DB2H   LINE      CODE     ---       #77
-      01000DB7H   LINE      CODE     ---       #78
-      01000DB7H   LINE      CODE     ---       #79
-      01000DB7H   LINE      CODE     ---       #80
+      01000DB3H   LINE      CODE     ---       #76
+      01000DB3H   LINE      CODE     ---       #77
+      01000DB3H   LINE      CODE     ---       #78
+      01000DB5H   LINE      CODE     ---       #79
+      01000DBEH   LINE      CODE     ---       #80
+      01000DBFH   LINE      CODE     ---       #81
+      01000DC4H   LINE      CODE     ---       #82
+      01000DC4H   LINE      CODE     ---       #83
+      01000DC4H   LINE      CODE     ---       #84
       ---         BLOCKEND  ---      ---       LVL=0
 
-      01000E15H   BLOCK     CODE     ---       LVL=0
-      01000E15H   LINE      CODE     ---       #83
-      01000E15H   LINE      CODE     ---       #86
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 88
+      01000E12H   BLOCK     CODE     ---       LVL=0
+      01000E12H   LINE      CODE     ---       #91
+      01000E12H   LINE      CODE     ---       #94
+      01000E14H   LINE      CODE     ---       #95
+      ---         BLOCKEND  ---      ---       LVL=0
+
+      01000A23H   BLOCK     CODE     ---       LVL=0
+      01000A23H   LINE      CODE     ---       #97
+      01000A27H   LINE      CODE     ---       #100
+      01000A2AH   LINE      CODE     ---       #101
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 88
 
 
-      01000E17H   LINE      CODE     ---       #87
+      01000A37H   LINE      CODE     ---       #102
+      01000A3FH   LINE      CODE     ---       #103
+      01000A41H   LINE      CODE     ---       #104
+      01000A4EH   LINE      CODE     ---       #105
+      01000A54H   LINE      CODE     ---       #106
+      01000A5CH   LINE      CODE     ---       #107
+      01000A5EH   LINE      CODE     ---       #108
+      01000A6BH   LINE      CODE     ---       #109
+      01000A71H   LINE      CODE     ---       #110
+      01000A79H   LINE      CODE     ---       #111
+      01000A7BH   LINE      CODE     ---       #112
+      01000A7BH   LINE      CODE     ---       #113
+      01000A81H   LINE      CODE     ---       #114
+      01000A89H   LINE      CODE     ---       #115
+      01000A89H   LINE      CODE     ---       #116
       ---         BLOCKEND  ---      ---       LVL=0
 
       0100063FH   BLOCK     CODE     ---       LVL=0
       0100063FH   BLOCK     CODE     NEAR LAB  LVL=1
       00000028H   SYMBOL    DATA     INT       nxtline
       0000002AH   SYMBOL    DATA     INT       lap
-      01000666H   BLOCK     CODE     NEAR LAB  LVL=2
+      01000668H   BLOCK     CODE     NEAR LAB  LVL=2
       0000002CH   SYMBOL    DATA     ---       strms
       00000030H   SYMBOL    DATA     ---       strsec
       00000033H   SYMBOL    DATA     ---       strmin
       00000036H   SYMBOL    DATA     ---       strhour
       00000039H   SYMBOL    DATA     ---       strtime
-      010007C5H   BLOCK     CODE     NEAR LAB  LVL=3
+      01000767H   BLOCK     CODE     NEAR LAB  LVL=3
       00000049H   SYMBOL    DATA     ---       strlap
       0000004CH   SYMBOL    DATA     ---       lapname
       ---         BLOCKEND  ---      ---       LVL=3
       ---         BLOCKEND  ---      ---       LVL=2
       ---         BLOCKEND  ---      ---       LVL=1
-      0100063FH   LINE      CODE     ---       #94
-      0100063FH   LINE      CODE     ---       #95
-      0100063FH   LINE      CODE     ---       #96
-      01000644H   LINE      CODE     ---       #97
-      01000648H   LINE      CODE     ---       #100
-      0100064BH   LINE      CODE     ---       #103
-      0100064DH   LINE      CODE     ---       #106
-      0100064FH   LINE      CODE     ---       #108
-      01000658H   LINE      CODE     ---       #109
-      0100065DH   LINE      CODE     ---       #110
-      0100065DH   LINE      CODE     ---       #113
-      01000666H   LINE      CODE     ---       #114
-      01000666H   LINE      CODE     ---       #120
-      0100067EH   LINE      CODE     ---       #121
-      01000696H   LINE      CODE     ---       #122
-      010006AEH   LINE      CODE     ---       #123
-      010006C6H   LINE      CODE     ---       #124
-      010006D5H   LINE      CODE     ---       #125
-      010006E7H   LINE      CODE     ---       #126
-      010006F9H   LINE      CODE     ---       #127
-      0100070BH   LINE      CODE     ---       #128
-      0100071DH   LINE      CODE     ---       #129
-      0100072FH   LINE      CODE     ---       #130
-      01000741H   LINE      CODE     ---       #131
-      01000753H   LINE      CODE     ---       #133
-      0100075EH   LINE      CODE     ---       #134
-      0100076BH   LINE      CODE     ---       #135
-      01000773H   LINE      CODE     ---       #136
-      01000775H   LINE      CODE     ---       #137
-      01000782H   LINE      CODE     ---       #138
-      01000787H   LINE      CODE     ---       #139
-      0100078FH   LINE      CODE     ---       #140
-      01000791H   LINE      CODE     ---       #141
-      0100079EH   LINE      CODE     ---       #142
-      010007A3H   LINE      CODE     ---       #143
-      010007ABH   LINE      CODE     ---       #144
-      010007ADH   LINE      CODE     ---       #145
-      010007ADH   LINE      CODE     ---       #146
-      010007B2H   LINE      CODE     ---       #147
-      010007BAH   LINE      CODE     ---       #148
-      010007BAH   LINE      CODE     ---       #149
-      010007C5H   LINE      CODE     ---       #150
-      010007D6H   LINE      CODE     ---       #151
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 89
+      0100063FH   LINE      CODE     ---       #119
+      0100063FH   LINE      CODE     ---       #120
+      0100063FH   LINE      CODE     ---       #121
+      01000645H   LINE      CODE     ---       #122
+      0100064AH   LINE      CODE     ---       #125
+      0100064DH   LINE      CODE     ---       #128
+      0100064FH   LINE      CODE     ---       #131
+      01000651H   LINE      CODE     ---       #133
+      0100065AH   LINE      CODE     ---       #134
+      0100065FH   LINE      CODE     ---       #135
+      0100065FH   LINE      CODE     ---       #138
+      01000668H   LINE      CODE     ---       #139
+      01000668H   LINE      CODE     ---       #145
+      01000680H   LINE      CODE     ---       #146
+      01000698H   LINE      CODE     ---       #147
+      010006B0H   LINE      CODE     ---       #148
+      010006C8H   LINE      CODE     ---       #149
+      010006D3H   LINE      CODE     ---       #150
+      010006E2H   LINE      CODE     ---       #151
+      010006F4H   LINE      CODE     ---       #152
+      01000706H   LINE      CODE     ---       #153
+      01000718H   LINE      CODE     ---       #154
+      0100072AH   LINE      CODE     ---       #155
+      0100073CH   LINE      CODE     ---       #156
+      0100074EH   LINE      CODE     ---       #158
+      01000759H   LINE      CODE     ---       #159
+      0100075CH   LINE      CODE     ---       #176
+      01000767H   LINE      CODE     ---       #177
+      01000778H   LINE      CODE     ---       #178
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 89
 
 
-      010007E9H   LINE      CODE     ---       #152
-      010007F4H   LINE      CODE     ---       #153
-      010007FCH   LINE      CODE     ---       #154
-      01000813H   LINE      CODE     ---       #155
-      01000825H   LINE      CODE     ---       #156
-      01000837H   LINE      CODE     ---       #157
-      01000849H   LINE      CODE     ---       #158
-      0100085BH   LINE      CODE     ---       #159
-      01000866H   LINE      CODE     ---       #160
-      0100086EH   LINE      CODE     ---       #161
-      01000872H   LINE      CODE     ---       #162
-      01000872H   LINE      CODE     ---       #164
-      01000872H   LINE      CODE     ---       #165
-      0100087DH   LINE      CODE     ---       #166
-      01000881H   LINE      CODE     ---       #167
-      01000881H   LINE      CODE     ---       #168
-      01000892H   LINE      CODE     ---       #169
-      01000896H   LINE      CODE     ---       #170
-      01000896H   LINE      CODE     ---       #171
-      01000899H   LINE      CODE     ---       #172
+      0100078BH   LINE      CODE     ---       #179
+      01000796H   LINE      CODE     ---       #180
+      0100079EH   LINE      CODE     ---       #181
+      010007B5H   LINE      CODE     ---       #182
+      010007C7H   LINE      CODE     ---       #183
+      010007D9H   LINE      CODE     ---       #184
+      010007EBH   LINE      CODE     ---       #185
+      010007FDH   LINE      CODE     ---       #186
+      01000808H   LINE      CODE     ---       #187
+      01000810H   LINE      CODE     ---       #188
+      01000815H   LINE      CODE     ---       #189
+      01000815H   LINE      CODE     ---       #191
+      01000815H   LINE      CODE     ---       #192
+      01000820H   LINE      CODE     ---       #193
+      01000824H   LINE      CODE     ---       #194
+      01000824H   LINE      CODE     ---       #195
+      01000835H   LINE      CODE     ---       #196
+      01000839H   LINE      CODE     ---       #197
+      01000839H   LINE      CODE     ---       #198
+      0100083CH   LINE      CODE     ---       #199
       ---         BLOCKEND  ---      ---       LVL=0
 
       ---         MODULE    ---      ---       ?C_INIT
-      01000A3BH   PUBLIC    CODE     ---       ?C_START
+      010009DEH   PUBLIC    CODE     ---       ?C_START
 
       ---         MODULE    ---      ---       ?C?COPY
       010004A2H   PUBLIC    CODE     ---       ?C?COPY
@@ -5768,7 +5768,7 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 
       ---         MODULE    ---      ---       STRCAT
       0000005FH   PUBLIC    DATA     ---       ?_STRCAT?BYTE
-      01000B48H   PUBLIC    CODE     ---       _STRCAT
+      01000B56H   PUBLIC    CODE     ---       _STRCAT
 
       ---         MODULE    ---      ---       ?C?STRCPY
       010005DAH   PUBLIC    CODE     ---       ?C?STRCPY
@@ -5784,9 +5784,9 @@ SYMBOL TABLE OF MODULE:  STOPWATCH.OMF.CRBUILD (DISP)
 
       ---         MODULE    ---      ---       PUTCHAR
       01000003H   PUBLIC    CODE     ---       _PUTCHAR
-LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  16:30:59  PAGE 90
+LX51 LINKER/LOCATER V4.66.30.0                                                        04/17/2017  20:22:53  PAGE 90
 
 
 
-Program Size: data=144.6 xdata=20 const=2848 code=3605
+Program Size: data=144.6 xdata=20 const=2848 code=3602
 LX51 RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

@@ -53,7 +53,7 @@
 // P3.4 - Display enable
 //
 //-----------------------------------------------------------------------------
-
+#include <SI_EFM8BB3_Register_Enums.h>
 #include "bsp.h"
 #include "pwr.h"
 
@@ -64,8 +64,12 @@
 #include <string.h>
 #include<stdlib.h>
 
+// Push button assignments
+#define UI_BTN_MENU   (1 << 0)
+#define UI_BTN_SELECT (1 << 1)
 
-int toggle =0;
+
+int toggle=0;
 int toggle2=0;
 
 // Read and return push button status
@@ -79,21 +83,42 @@ uint8_t UI_getButtons(void)
   return status;
 }
 
-// Port Match ISR - Triggered on leading edge of UI_BTN_SELECT.
-SI_INTERRUPT (PMATCH_ISR, PMATCH_IRQn)
-{
-  // Turn on LED whenever UI_BTN_SELECT is pressed
-  BSP_LED_G = BSP_LED_ON;
-}
-
 int ms=0;
 int sec=0;
 int minute=0;
 int hour=0;
+// Port Match ISR - Triggered on leading edge of UI_BTN_SELECT.
+SI_INTERRUPT (PMATCH_ISR, PMATCH_IRQn)
+{
+  // Turn on LED whenever UI_BTN_SELECT is pressed
+	BSP_LED_G = BSP_LED_ON;
+}
+
+SI_INTERRUPT (TIMER3_ISR, TIMER3_IRQn)
+{
+    // Overflows every 1 ms
+    TMR3CN0 &= ~TMR3CN0_TF3H__BMASK;
+    if (ms<999){
+    		  ms++;
+    	  }
+    	  else if(sec<59){
+    		  ms=0;
+    		  sec++;
+    	  }
+    	  else if(minute<59){
+    		  sec=0;
+    		  minute++;
+    	  }
+    	  else{
+    		  minute=0;
+    		  hour++;
+    	  }
+}
+
 
 void main(void)
 {
-	int nxtline=0;
+	int nxtline=8;
 	int lap=0;
 
   // Initialize the device
@@ -121,8 +146,8 @@ void main(void)
 	  sprintf(strmin,"%i",minute);
 	  sprintf(strsec, "%i", sec);
 	  sprintf(strms,"%i",ms);
-	  strcpy(strtime, "Time:");
-	  strcat(strtime, strhour);
+	  DrawScreenText("Time",0);
+	  strcpy(strtime, strhour);
 	  strcat(strtime,":");
 	  strcat(strtime,strmin);
 	  strcat(strtime,":");
@@ -130,8 +155,10 @@ void main(void)
 	  strcat(strtime,":");
 	  strcat(strtime,strms);
 
-	  DrawScreenText(strtime,0);
-	  if (ms<999){
+	  DrawScreenText(strtime,8);
+	  TMR3CN0 &= ~TMR3CN0_TF3H__BMASK;
+
+	  /*if (ms<999){
 		  ms++;
 	  }
 	  else if(sec<59){
@@ -145,7 +172,7 @@ void main(void)
 	  else{
 		  minute=0;
 		  hour++;
-	  }
+	  }*/
 	  if (UI_getButtons() == 1) {
 		  char strlap[3]="";
 		  char lapname[19]="";
@@ -158,7 +185,7 @@ void main(void)
 		  strcat(lapname,strtime);
 		  DrawScreenText(lapname,nxtline);
 		  if (nxtline==120){
-			  nxtline=0;
+			  nxtline=8;
 		  }
 
 	  }

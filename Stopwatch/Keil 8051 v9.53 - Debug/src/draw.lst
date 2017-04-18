@@ -1,20 +1,19 @@
-C51 COMPILER V9.53.0.0   DRAW                                                              04/10/2017 19:12:34 PAGE 1   
+C51 COMPILER V9.53.0.0   DRAW                                                              04/17/2017 20:18:20 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE DRAW
 OBJECT MODULE PLACED IN .\src\draw.OBJ
-COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\Users\cardy\S
-                    -implicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\src\draw.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2
-                    -) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\Users\cardy\SimplicityStudio\v4
-                    -_workspace\EFM8BB3_PowerModes_2_2_2\inc;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\config
-                    -;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\graphics;C:/SiliconLabs/SimplicityStudio/v4/d
-                    -eveloper/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8BB3_S
-                    -LSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;
-                    -C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;C:/Silic
-                    -onLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;C:/SiliconLabs/Sim
-                    -plicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;C:/SiliconLabs/SimplicityStudio/v4/dev
-                    -eloper/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/
-                    -EFM8BB3/inc) PRINT(.\src\draw.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\draw.OBJ)
+COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\Users\cardy\D
+                    -esktop\Stopwatch\src\draw.c OMF2 SMALL DEBUG OBJECTEXTEND ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEF
+                    -INE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\Users\cardy\Desktop\Stopwatch\inc\graphics;C:\Users\cardy\Desktop\St
+                    -opwatch\inc;C:\Users\cardy\Desktop\Stopwatch\inc\config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//k
+                    -its/common/drivers/efm8_memory_lcd/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/driver
+                    -s/efm8_memory_lcd/inc/graphics;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_m
+                    -emory_lcd/inc/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/Simpl
+                    -icityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/s
+                    -dks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/
+                    -inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc) PRINT(.\src\dra
+                    -w.lst) COND PAGEWIDTH(120) PAGELENGTH(65) OBJECT(.\src\draw.OBJ)
 
 line level    source
 
@@ -63,9 +62,9 @@ line level    source
   43          //-----------------------------------------------------------------------------
   44          // DrawSplashScreen() Routine
   45          //-----------------------------------------------------------------------------
-C51 COMPILER V9.53.0.0   DRAW                                                              04/10/2017 19:12:34 PAGE 2   
-
   46          //
+C51 COMPILER V9.53.0.0   DRAW                                                              04/17/2017 20:18:20 PAGE 2   
+
   47          // Draw SiLabs splash screen.
   48          //
   49          //-----------------------------------------------------------------------------

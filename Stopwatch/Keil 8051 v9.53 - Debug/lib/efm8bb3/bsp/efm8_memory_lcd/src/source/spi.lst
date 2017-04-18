@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   SPI                                                               04/10/2017 19:13:05 PAGE 1   
+C51 COMPILER V9.53.0.0   SPI                                                               04/17/2017 20:18:20 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE SPI
@@ -6,16 +6,15 @@ OBJECT MODULE PLACED IN .\lib\efm8bb3\bsp\efm8_memory_lcd\src\source\spi.OBJ
 COMPILER INVOKED BY: c:\SiliconLabs\SimplicityStudio\v4\developer\toolchains\keil_8051\9.53\BIN\C51.exe C:\SiliconLabs\S
                     -implicityStudio\v4\developer\sdks\8051\v4.0.3\Device\EFM8BB3\bsp\efm8_memory_lcd\source\spi.c OMF2 SMALL DEBUG OBJECTEXT
                     -END ROM(LARGE) WARNINGLEVEL(2) FLOATFUZZY(3) OPTIMIZE(8,SPEED) DEFINE(DEBUG=1) INTVECTOR(0X0000) INTPROMOTE INCDIR(C:\Us
-                    -ers\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB
-                    -3_PowerModes_2_2_2\inc\config;C:\Users\cardy\SimplicityStudio\v4_workspace\EFM8BB3_PowerModes_2_2_2\inc\graphics;C:/Sili
-                    -conLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdk
-                    -s/8051/v4.0.3//kits/EFM8BB3_SLSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common
-                    -/drivers/efm8_memory_lcd/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_mem
-                    -ory_lcd/inc/graphics;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/
-                    -inc/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc;C:/Silico
-                    -nLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLabs/SimplicityStudio/v4/develo
-                    -per/sdks/8051/v4.0.3//Device/EFM8BB3/inc) PRINT(.\lib\efm8bb3\bsp\efm8_memory_lcd\src\source\spi.lst) COND PAGEWIDTH(120
-                    -) PAGELENGTH(65) OBJECT(.\lib\efm8bb3\bsp\efm8_memory_lcd\src\source\spi.OBJ)
+                    -ers\cardy\Desktop\Stopwatch\inc\graphics;C:\Users\cardy\Desktop\Stopwatch\inc;C:\Users\cardy\Desktop\Stopwatch\inc\confi
+                    -g;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc;C:/SiliconLabs/
+                    -SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/graphics;C:/SiliconLabs/Simplici
+                    -tyStudio/v4/developer/sdks/8051/v4.0.3//kits/common/drivers/efm8_memory_lcd/inc/config;C:/SiliconLabs/SimplicityStudio/v
+                    -4/developer/sdks/8051/v4.0.3//kits/common/bsp;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//kits/EFM8BB
+                    -3_SLSTK2022A/config;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/shared/si8051base;C:/SiliconLa
+                    -bs/SimplicityStudio/v4/developer/sdks/8051/v4.0.3//Device/EFM8BB3/inc;C:/SiliconLabs/SimplicityStudio/v4/developer/sdks/
+                    -8051/v4.0.3//Device/EFM8BB3/peripheral_driver/inc) PRINT(.\lib\efm8bb3\bsp\efm8_memory_lcd\src\source\spi.lst) COND PAGE
+                    -WIDTH(120) PAGELENGTH(65) OBJECT(.\lib\efm8bb3\bsp\efm8_memory_lcd\src\source\spi.OBJ)
 
 line level    source
 
@@ -63,9 +62,9 @@ line level    source
   42   1      
   43   1        // Wait for previous transfer to complete
   44   1        while (TransferState != ST_IDLE);
-C51 COMPILER V9.53.0.0   SPI                                                               04/10/2017 19:13:05 PAGE 2   
-
   45   1      
+C51 COMPILER V9.53.0.0   SPI                                                               04/17/2017 20:18:20 PAGE 2   
+
   46   1        // Start new transfer
   47   1        TransferState = ST_CS_SETUP;
   48   1        TransferSize = size;
@@ -128,9 +127,9 @@ line level    source
  105   1        // CS setup complete
  106   1        if (TransferState == ST_CS_SETUP)
  107   1        {
-C51 COMPILER V9.53.0.0   SPI                                                               04/10/2017 19:13:05 PAGE 3   
-
  108   2          TransferState = ST_TX;
+C51 COMPILER V9.53.0.0   SPI                                                               04/17/2017 20:18:20 PAGE 3   
+
  109   2          SPI0_transfer(TxBuffer, NULL, SPI0_TRANSFER_TX, TransferSize);
  110   2        }
  111   1        // CS hold complete

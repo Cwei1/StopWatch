@@ -123,10 +123,5 @@
 			<type>1</type>
 			<locationURI>STUDIO_SDK_LOC/Device/EFM8BB3/bsp/efm8_memory_lcd/source/spi.c</locationURI>
 		</link>
-		<link>
-			<name>lib/efm8bb3/bsp/efm8_memory_lcd/src/source/tick.c</name>
-			<type>1</type>
-			<locationURI>STUDIO_SDK_LOC/Device/EFM8BB3/bsp/efm8_memory_lcd/source/tick.c</locationURI>
-		</link>
 	</linkedResources>
 </projectDescription>
