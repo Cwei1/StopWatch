@@ -1,4 +1,4 @@
-C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:22:53 PAGE 1   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:37:45 PAGE 1   
 
 
 C51 COMPILER V9.53.0.0, COMPILATION OF MODULE MAIN
@@ -63,7 +63,7 @@ line level    source
   44          // Timer2 - 2 MHz (SPI CS delay)
   45          // Timer3 - 1 kHz (1 ms tick)
   46          // P2.6 - Display CS (Active High)
-C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:22:53 PAGE 2   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:37:45 PAGE 2   
 
   47          // P0.6 - SCK
   48          // P1.0 - MOSI
@@ -128,7 +128,7 @@ line level    source
  107   2                }
  108   1                else if(minute<59){
  109   2                        sec=0;
-C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:22:53 PAGE 3   
+C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:37:45 PAGE 3   
 
  110   2                        minute++;
  111   2                }
@@ -141,92 +141,80 @@ line level    source
  118          
  119          void main(void)
  120          {
- 121   1              int nxtline=8;
- 122   1              int lap=0;
- 123   1      
- 124   1        // Initialize the device
- 125   1        enter_DefaultMode_from_RESET();
- 126   1      
- 127   1        // Start with the LED on
- 128   1        BSP_LED_G = BSP_LED_ON;
- 129   1      
- 130   1        // Enable all interrupts
- 131   1        IE_EA = 1;
- 132   1      
- 133   1        if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 0) {
- 134   2              toggle2=1;
- 135   2        }
- 136   1      
- 137   1        // Mainloop
- 138   1        while (toggle2)
- 139   1        {
- 140   2                char strms[4];
- 141   2                char strsec[3];
- 142   2                char strmin[3];
- 143   2                char strhour[3];
- 144   2                char strtime[16];
- 145   2                sprintf(strhour, "%i", hour);
- 146   2                sprintf(strmin,"%i",minute);
- 147   2                sprintf(strsec, "%i", sec);
- 148   2                sprintf(strms,"%i",ms);
- 149   2                DrawScreenText("Time",0);
- 150   2                strcpy(strtime, strhour);
- 151   2                strcat(strtime,":");
- 152   2                strcat(strtime,strmin);
- 153   2                strcat(strtime,":");
- 154   2                strcat(strtime,strsec);
- 155   2                strcat(strtime,":");
- 156   2                strcat(strtime,strms);
- 157   2      
- 158   2                DrawScreenText(strtime,8);
- 159   2                TMR3CN0 &= ~TMR3CN0_TF3H__BMASK;
- 160   2      
- 161   2                /*if (ms<999){
- 162   2                        ms++;
- 163   2                }
- 164   2                else if(sec<59){
- 165   2                        ms=0;
- 166   2                        sec++;
- 167   2                }
- 168   2                else if(minute<59){
- 169   2                        sec=0;
- 170   2                        minute++;
- 171   2                }
- 172   2                else{
-C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:22:53 PAGE 4   
+ 121   1      
+ 122   1              int nxtline=8;
+ 123   1              int lap=0;
+ 124   1      
+ 125   1        // Initialize the device
+ 126   1        enter_DefaultMode_from_RESET();
+ 127   1      
+ 128   1        // Start with the LED on
+ 129   1        BSP_LED_G = BSP_LED_ON;
+ 130   1      
+ 131   1        // Enable all interrupts
+ 132   1        IE_EA = 1;
+ 133   1      
+ 134   1        if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 0) {
+ 135   2              toggle2=1;
+ 136   2        }
+ 137   1      
+ 138   1        // Mainloop
+ 139   1        while (toggle2)
+ 140   1        {
+ 141   2                char strms[4];
+ 142   2                char strsec[3];
+ 143   2                char strmin[3];
+ 144   2                char strhour[3];
+ 145   2                char strtime[16];
+ 146   2                sprintf(strhour, "%i", hour);
+ 147   2                sprintf(strmin,"%i",minute);
+ 148   2                sprintf(strsec, "%i", sec);
+ 149   2                sprintf(strms,"%i",ms);
+ 150   2                DrawScreenText("Swag Timer",0);
+ 151   2                strcpy(strtime, strhour);
+ 152   2                strcat(strtime,":");
+ 153   2                strcat(strtime,strmin);
+ 154   2                strcat(strtime,":");
+ 155   2                strcat(strtime,strsec);
+ 156   2                strcat(strtime,":");
+ 157   2                strcat(strtime,strms);
+ 158   2      
+ 159   2                DrawScreenText(strtime,8);
+ 160   2                TMR3CN0 &= ~TMR3CN0_TF3H__BMASK;
+ 161   2      
+ 162   2      
+ 163   2                if (UI_getButtons() == 1) {
+ 164   3                        char strlap[3]="";
+ 165   3                        char lapname[19]="";
+ 166   3                        nxtline=nxtline+8;
+ 167   3                        lap++;
+ 168   3                        sprintf(strlap,"%i",lap);
+ 169   3                        strcat(lapname, "Lap ");
+ 170   3                        strcat(lapname, strlap);
+ 171   3                        strcat(lapname,": "
+ 172   3                                        "");
+C51 COMPILER V9.53.0.0   MAIN                                                              04/17/2017 20:37:45 PAGE 4   
 
- 173   2                        minute=0;
- 174   2                        hour++;
- 175   2                }*/
- 176   2                if (UI_getButtons() == 1) {
- 177   3                        char strlap[3]="";
- 178   3                        char lapname[19]="";
- 179   3                        nxtline=nxtline+8;
- 180   3                        lap++;
- 181   3                        sprintf(strlap,"%i",lap);
- 182   3                        strcat(lapname, "Lap ");
- 183   3                        strcat(lapname, strlap);
- 184   3                        strcat(lapname,":");
- 185   3                        strcat(lapname,strtime);
- 186   3                        DrawScreenText(lapname,nxtline);
- 187   3                        if (nxtline==120){
- 188   4                                nxtline=8;
- 189   4                        }
- 190   3      
- 191   3                }
- 192   2                if (BSP_PB0 == !BSP_PB_PRESSED && toggle == 1) {
- 193   3                                        toggle=0;
- 194   3                }
- 195   2                if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 1) {
- 196   3                                        toggle2=0;
- 197   3                }
- 198   2        }
- 199   1      }
+ 173   3                        strcat(lapname,strtime);
+ 174   3                        DrawScreenText(lapname,nxtline);
+ 175   3                        if (nxtline==120){
+ 176   4                                nxtline=8;
+ 177   4                        }
+ 178   3      
+ 179   3                }
+ 180   2                if (BSP_PB0 == !BSP_PB_PRESSED && toggle == 1) {
+ 181   3                                        toggle=0;
+ 182   3                }
+ 183   2                if (BSP_PB1 == BSP_PB_PRESSED && toggle2 == 1) {
+ 184   3                                        toggle2=0;
+ 185   3                }
+ 186   2        }
+ 187   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
    CODE SIZE        =    644    ----
-   CONSTANT SIZE    =     37    ----
+   CONSTANT SIZE    =     46    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----
    DATA SIZE        =     12      55

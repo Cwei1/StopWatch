@@ -118,6 +118,7 @@ SI_INTERRUPT (TIMER3_ISR, TIMER3_IRQn)
 
 void main(void)
 {
+
 	int nxtline=8;
 	int lap=0;
 
@@ -146,7 +147,7 @@ void main(void)
 	  sprintf(strmin,"%i",minute);
 	  sprintf(strsec, "%i", sec);
 	  sprintf(strms,"%i",ms);
-	  DrawScreenText("Time",0);
+	  DrawScreenText("Swag Timer",0);
 	  strcpy(strtime, strhour);
 	  strcat(strtime,":");
 	  strcat(strtime,strmin);
@@ -158,21 +159,7 @@ void main(void)
 	  DrawScreenText(strtime,8);
 	  TMR3CN0 &= ~TMR3CN0_TF3H__BMASK;
 
-	  /*if (ms<999){
-		  ms++;
-	  }
-	  else if(sec<59){
-		  ms=0;
-		  sec++;
-	  }
-	  else if(minute<59){
-		  sec=0;
-		  minute++;
-	  }
-	  else{
-		  minute=0;
-		  hour++;
-	  }*/
+
 	  if (UI_getButtons() == 1) {
 		  char strlap[3]="";
 		  char lapname[19]="";
@@ -181,7 +168,8 @@ void main(void)
 		  sprintf(strlap,"%i",lap);
 		  strcat(lapname, "Lap ");
 		  strcat(lapname, strlap);
-		  strcat(lapname,":");
+		  strcat(lapname,": "
+				  "");
 		  strcat(lapname,strtime);
 		  DrawScreenText(lapname,nxtline);
 		  if (nxtline==120){
